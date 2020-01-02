@@ -5,14 +5,63 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/transicion.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/modernizr.js"></script>
     <title>ALUNA - SOLERIUM</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <!--Contenido del slide-->
+    <main>
+      <div class="cd-index cd-main-content">
+         <div>
+           <!-- Inicio contenido -->
+            <div class="al-cont">
+              <div class="al-h-img"></div>
+              <div class="al-h-info">
+                <h1>
+                  <img src="img/logo-aluna@2x.png" alt="ALUNA">
+                  <span>ALUNA</span>
+                  <small>Apartamentos</small></h1>
+                <div class="al-h-nav">
+                    <div class="col-1">
+                      <a href="proyecto.html" data-type="page-transition">PROYECTO / FACHADAS <span class="circ"></span></a>
+                    </div>
+                    <div class="col-2">
+                      <a href="ubicacion.html" data-type="page-transition">UBICACIÓN <span class="circ"></span></a>
+                      <a href="apartamentos.html" data-type="page-transition">APARTAMENTOS <span class="circ"></span></a>
+                    </div>
+                    <div class="col-3">
+                      <a href="galeria.html" data-type="page-transition"> <span class="circ"></span>GALERÍA</a>
+                      <a href="zonas.html" data-type="page-transition"> <span class="circ"></span>ZONAS COMUNES</a>
+                      <a href="plantas.html" data-type="page-transition">PLANTAS TIPO <span class="circ"></span></a>
+                    </div>
+                </div>
+                <div class="al-h-footer">
+                  <a href="solerium/index.html" data-type="page-transition"><img src="img/logo-solerium@2x.png" alt="Solerium"></a>
+                  <span>#VIVOSOLERIUM</span>
+                </div>
+              </div>
+            </div>
+            <div class="al-nav-btn">
+              <button class="hamburger hamburger--spin" type="button">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+              </button>
+            </div>
+            <!-- Fin contenido -->
+         </div>
+      </div>
+   </main>
+   <div class="cd-cover-layer"></div> <!-- this is the cover layer -->
+   
+   <div class="cd-loading-bar"></div> <!-- this is the loading bar -->
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/transicion.js"></script>
   </body>
 </html>
