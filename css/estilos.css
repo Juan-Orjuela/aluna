@@ -128,10 +128,25 @@ img {
 }
 /*HOME*/
 .al-h-img {
-    background: #0c2430;
+    background-size: cover;
     width: 50%;
+    position: relative;
+    overflow: hidden;
 }
-
+.al-h-img .img-cont {
+    background: #0c2430 center no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 15s ease;
+}
+.al-h-img.pro .img-cont {
+    background-image: url("../img/aluna-home-1.jpg");
+    transform: scale(1.2);
+}
 .al-h-info {
     padding: 80px 140px;
     display: flex;
