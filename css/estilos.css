@@ -590,7 +590,9 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
 #al-ub-slider .lugares .col:first-child {
     margin-right: 30px;
 }
-
+.slide-gal {
+    background: #0b2330;
+}
 .slide-gal > div {
     width: 50%;
 }
@@ -642,3 +644,15 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
 }
 
 
+#al-gl-slider .slide-1 .col-2 .img-cont {
+    background-image: url("../img/aluna-gl-1.jpg");
+    background-position: center;
+}
+#al-gl-slider .slide-2 .col-2 .img-cont {
+    background-image: url("../img/aluna-gl-2.jpg");
+    background-position: left center;
+}
+#al-gl-slider .slide-3 .col-2 .img-cont {
+    background-image: url("../img/aluna-gl-3.jpg");
+    background-position: left center;
+}
