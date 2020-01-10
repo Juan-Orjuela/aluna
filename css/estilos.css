@@ -255,14 +255,14 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
 }
 
 .al-h-img .img-cont {
-    background: #0c2430 center no-repeat;
+    background: center no-repeat;
     background-size: cover;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    transition: transform 15s ease;
+    
 }
 
 .al-h-img.pro .img-cont {
@@ -440,9 +440,12 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
 #sc-proyecto.al-cont .al-slide .slide-1 .col-1 {
     width: 65%;
     background: url('../img/aluna-proy-1.jpg') no-repeat left center;
-    background-size: cover;
+    position: relative;
+    overflow: hidden;
 }
-
+#sc-proyecto.al-cont .al-slide .slide-1 .col-1 .img-cont {
+    background-image: url('../img/aluna-proy-1.jpg');
+}
 #sc-proyecto.al-cont .al-slide .slide-1 .col-2 {
     width: 35%;
     display: flex;
@@ -462,10 +465,13 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
 
 #sc-proyecto.al-cont .al-slide .slide-2 .col-1 {
     width: 50%;
-    background: url('../img/aluna-home-1.jpg') no-repeat left center;
-    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    
 }
-
+#sc-proyecto.al-cont .al-slide .slide-2 .col-1 .img-cont {
+    background-image: url('../img/aluna-home-1.jpg');
+}
 #sc-proyecto.al-cont .al-slide .slide-2 .col-2 {
     width: 50%;
     padding: 0 130px;
@@ -806,4 +812,49 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
     position: relative;
     left: -60px;
     letter-spacing: 0.1em;
+}
+/*Transicion*/
+.tr-overlay {
+    position: fixed;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.tr-overlay.proyecto {
+    background: white;
+}
+.tr-overlay.ubicacion,
+.tr-overlay.galeria,
+.tr-overlay.zonas {
+    background: #0c2430;
+}
+.tr-overlay.apartamentos,
+.tr-overlay.index {
+    background: #aa8b81;
+}
+/*Ken Burnst*/
+.img-cont {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+@keyframes kenny {
+    from {
+        transform: scale(1);
+    } to {
+        transform: scale(1.1);
+    }
+}
+.al-slide.slick-active .img-cont {
+    animation: kenny 12s ease forwards;
 }
