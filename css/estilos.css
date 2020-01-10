@@ -747,3 +747,63 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
 #sc-zonas .al-cornisa h2:before {
     background: #0a2230;
 }
+/*Apartamentos*/
+#sc-aptos {
+    background: #AA8B81;
+    align-items: center;
+    
+}
+#sc-aptos .al-ap-img {
+    background: url("../img/aluna-aptos.jpg");
+    width: 100%;
+    height: 60vh;
+    position: relative;
+}
+#sc-aptos .al-ap-img a {
+    position: absolute;
+    bottom: -90px;;
+    left: 30px;
+    display: inline-block;
+    width: 100px;
+    border: 1px solid #D9D8CA;
+    padding: 12px 18px 6px ;
+
+}
+
+#sc-aptos .al-ap-nav {
+    font-family: 'gothambold';
+    color: white;
+    padding: 130px;
+    font-size: 1.5rem;
+}
+#sc-aptos .al-ap-nav ul {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+    max-height: 330px;
+    align-content: space-between;
+}
+#sc-aptos .al-ap-nav ul li {
+    width: 46%;
+    margin-bottom: 1rem;
+
+}
+#sc-aptos .al-ap-nav a {
+    border: 1px solid white;
+    width: 100%;
+    display: block;
+    padding: 16px 16px 12px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+#sc-aptos .al-ap-nav h1 {
+    position: relative;
+    left: -60px;
+    letter-spacing: 0.1em;
+}
