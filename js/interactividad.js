@@ -4,6 +4,17 @@ $( document ).ready(function() {
         $(this).toggleClass("is-active");
         $(".al-overlay").toggle();
       });
+
+  // Plantas    
+  $("#nav-plantas").on("click", ".btn-planta", function(event){
+    event.preventDefault();
+    $(".btn-planta").removeClass("activo");
+    $(this).addClass("activo");
+    var planta = $(this).data("planta");
+    
+    $("#plantas-cont").children("div").removeClass("activo");
+    $("#plantas-cont").children("."+planta).addClass("activo");
+  });
   //Transiciones
   $("a").on("click", redirigir);
 

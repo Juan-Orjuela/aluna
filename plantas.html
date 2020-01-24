@@ -18,27 +18,26 @@
       <div class="cd-index cd-main-content">
          <div>
            <!-- Inicio contenido -->
-            <div id="sc-aptos" class="al-cont">
+            <div id="sc-plantas" class="al-cont">
 
-              <a class="btn-volver" href="index.html" data-type="page-transition">VOLVER</a>
+              <a class="btn-volver" href="index.html" data-type="page-transition">INICIO</a>
 
-              <div class="al-ap-img">
-                <div class="img-cont"></div>
-                <a href="solerium/index.html" data-type="page-transition"><img src="img/logo-solerium@2x.png" alt="Solerium"></a>
+              <div class="al-pl-img">
+                <div id="plantas-cont" class="img-cont">
+                  <div class="planta-1"></div>
+                  <div class="planta-2"></div>
+                  <div class="planta-3"></div>
+                </div>
+                <a href="solerium/index.html" data-type="page-transition"><img src="img/logo-solerium-c@2x.png" alt="Solerium"></a>
               </div>
-              <div class="al-ap-nav">
-                <h1>APARTAMENTOS</h1>
-                <ul>
-                  <li><a href="apto-1.html">69,49 M2</a></li>
-                  <li><a href="apto-2.html">77,42 M2</a></li>
-                  <li><a href="apto-3.html">84,75 M2</a></li>
-                  <li><a href="apto-4.html">93,66 M2</a></li>
-                  <li><a href="apto-5.html">139,50 M2</a></li>
-                  <li><a href="apto-6.html">157,25 M2</a></li>
-                  <li><a href="apto-7.html">167,24 M2</a></li>
-                  <li><a href="apto-8.html">167,97 M2</a></li>
-                  <li><a href="apto-9.html">173,57 M2</a></li>
-                  <li><a href="apto-10.html">PLANTAS TIPO</a></li>
+              <div class="al-pl-nav">
+                <h1>PLANTAS TIPO</h1>
+                <ul id="nav-plantas">
+                  <li><button class="btn-planta btn-planta1" data-planta="planta-1" href="#">Pisos 4 - 5 - 6 -7 - 8 - 9</button></li>
+                  <li><button class="btn-planta" data-planta="planta-2" href="#">Pisos 11 - 12 - 13 - 14 - 15 - 16</button></li>
+                  <li><button class="btn-planta" data-planta="planta-3" href="#">Pisos 20 - 21 - 22 - 23</button></li>
+                  <br>
+                  <li><a href="apartamentos.html">APARTAMENTOS TIPO</a></li>
                 </ul>
               </div>
             </div>
@@ -70,5 +69,10 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-2.1.1.js"></script>
     <script src="js/interactividad.js"></script>
+    <script>
+    $(document).ready(function(){
+      $(".btn-planta1").trigger("click");
+    })
+    </script>
   </body>
 </html>

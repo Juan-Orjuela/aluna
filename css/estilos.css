@@ -990,6 +990,9 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
 .tr-overlay.index {
     background: #aa8b81;
 }
+.tr-overlay.plantas{
+    background: #e7e1d3;
+}
 /*Ken Burnst*/
 .img-cont {
     background-position: center;
@@ -1011,4 +1014,90 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
 }
 .al-slide.slick-active .img-cont {
     animation: kenny 12s ease forwards;
+}
+/*Plantas*/
+
+#sc-plantas {
+    background: #e7e1d3;
+    align-items: center;
+}
+ 
+#sc-plantas .al-pl-img {
+    width: 100%;
+    position: relative;
+     height: calc(100vh - 300px);
+}
+#sc-plantas .al-pl-img .img-cont > div {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity:0;
+    transition: opacity .3s ease;
+}
+#sc-plantas .al-pl-img .img-cont > div.activo {
+    opacity: 1;
+}
+#sc-plantas .al-pl-img .img-cont > div:first-child {
+    background-image: url(../img/planta-1.jpg)
+}
+#sc-plantas .al-pl-img .img-cont > div:nth-child(2) {
+    background-image: url(../img/planta-2.jpg)
+}
+#sc-plantas .al-pl-img .img-cont > div:last-child {
+    background-image: url(../img/planta-3.jpg)
+}
+#sc-plantas .al-pl-img a {
+    position: absolute;
+    bottom: -90px;
+    left: 30px;
+    display: inline-block;
+    width: 100px;
+    border: 1px solid #606060;
+    padding: 12px 18px 6px ;
+}
+
+#sc-plantas .al-pl-nav {
+    font-family: 'gothambold';
+    color: #0c2430;
+    padding: 130px;
+    font-size: 1.5rem;
+    min-width: 600px;
+}
+#sc-plantas .al-pl-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#sc-plantas .al-pl-nav button,
+#sc-plantas .al-pl-nav a {
+    border: 1px solid #0c2430;
+    width: 100%;
+    display: block;
+    padding: 16px 16px 12px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    text-align: center;
+    color: #0c2430;
+    text-decoration: none;
+    margin-bottom: 16px;
+    background: transparent;
+    transition: all .3s
+ ease;}
+#sc-plantas .al-pl-nav button:focus {
+    outline: none;
+}
+#sc-plantas .al-pl-nav h1 {
+    position: relative;
+    left: -60px;
+    letter-spacing: 0.1em;
+    white-space:nowrap;
+    color: #aa8b81;
+
+}
+#sc-plantas .al-pl-nav .activo {
+     color: #aa8b81;
+     border: 1px solid #aa8b81;
 }
