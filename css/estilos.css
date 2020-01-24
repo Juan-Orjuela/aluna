@@ -1,4 +1,5 @@
-@charset "UTF-8"; /*TIPOGRAFIA*/
+@charset "UTF-8"; 
+/*TIPOGRAFIA*/
 @font-face {
     font-family: 'aleolight';
     src: url('../fuentes/Aleo-Light-webfont.woff') format('woff');
@@ -757,15 +758,26 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
 #sc-aptos {
     background: #AA8B81;
     align-items: center;
-    
+}
+.sc-apto {
+    background: #ffffff;
+    align-items: center;
+}
+#sc-aptos .al-ap-img,
+.sc-apto .al-ap-img {
+    width: 100%;
+   
+    position: relative;
 }
 #sc-aptos .al-ap-img {
     background: url("../img/aluna-aptos.jpg");
-    width: 100%;
-    height: 60vh;
-    position: relative;
+     height: 60vh;
 }
-#sc-aptos .al-ap-img a {
+.sc-apto .al-ap-img {
+    background: #f1f1f1;
+}
+#sc-aptos .al-ap-img a,
+.sc-apto .al-ap-img a {
     position: absolute;
     bottom: -90px;;
     left: 30px;
@@ -781,6 +793,11 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
     color: white;
     padding: 130px;
     font-size: 1.5rem;
+}
+.sc-apto .al-ap-info {
+    padding: 0 130px 0 100px;
+    box-sizing: border-box;
+    min-width: 600px;
 }
 #sc-aptos .al-ap-nav ul {
     padding: 0;
@@ -808,10 +825,70 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
     color: white;
     text-decoration: none;
 }
-#sc-aptos .al-ap-nav h1 {
+#sc-aptos .al-ap-nav h1,
+.sc-apto .al-ap-info h1 {
     position: relative;
     left: -60px;
     letter-spacing: 0.1em;
+
+}
+/*Apto*/
+.sc-apto .al-ap-info h1 {
+    font-family: 'gothambold';
+    font-size: 3rem;
+    color: #0b2330;
+    margin-bottom: 1rem;
+}
+.sc-apto .al-ap-info h3 {
+    font-family: 'gothambold';
+    color: #A1A7AB;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid #868686;
+    text-align: left;
+}
+.sc-apto .ubi {
+    text-align: center;
+}
+.sc-apto .int {
+    color: #9D999C;
+}
+.sc-apto .int {
+    display: flex;
+}
+.sc-apto .int .areas {
+    width: 50%;
+    border-right: 1px solid #868686;
+}
+.sc-apto .int span {
+    display: block;
+    border: 1px solid #9D7F73;
+    color: #0b2330;
+    font-family: 'aleoitalic';
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 4px;
+    margin-top: 4px;
+    max-width: 110px;
+
+}
+.sc-apto .apt {
+    width: 25%;
+}
+.sc-apto .apt ul{
+    list-style-type: none;
+    padding: 30px;
+    color: #9D7F73;
+    font-size: 1.35rem;
+    line-height: 1.5
+}
+.sc-apto .des {
+    font-family: 'aleoitalic';
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+    color: #0b2330;
+}
+.sc-apto .ap-cont img{
+    max-width: 91%
 }
 /*Transicion*/
 .tr-overlay {
