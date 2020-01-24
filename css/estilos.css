@@ -838,6 +838,7 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
     font-size: 3rem;
     color: #0b2330;
     margin-bottom: 1rem;
+    line-height: 1;
 }
 .sc-apto .al-ap-info h3 {
     font-family: 'gothambold';
@@ -858,6 +859,10 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
 .sc-apto .int .areas {
     width: 50%;
     border-right: 1px solid #868686;
+}
+.sc-apto .int .apt:last-child ul {
+    border-left: 1px solid #aa8b81;
+
 }
 .sc-apto .int span {
     display: block;
@@ -881,14 +886,85 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
     font-size: 1.35rem;
     line-height: 1.5
 }
+.sc-apto .apt ul .nota {
+    font-size: .95rem;
+    white-space:nowrap
+}
 .sc-apto .des {
     font-family: 'aleoitalic';
     font-size: 1.1rem;
     letter-spacing: 0.05em;
     color: #0b2330;
 }
+.sc-apto .ap-cont {
+    text-align: center;
+}
 .sc-apto .ap-cont img{
-    max-width: 91%
+    max-width: 91%;
+
+}
+.sc-apto .al-ap-info > a {
+    display: block;
+    border: 1px solid #9D7F73;
+    color: #0b2330;
+    font-size: 1rem;
+    text-align: center;
+    line-height:1;
+    padding: 8px 4px 6px;;
+    margin-top: 2rem;
+    font-family: 'gothambold';
+    text-decoration: none;
+    max-width: 220px;
+}
+.sc-apto .al-ap-img .al-slider-ap{
+    max-width: calc(100vw - 600px)
+}
+.sc-apto .al-ap-img .al-slide-ap .img{
+    height: calc(100vh - 300px);
+    position: relative;
+}
+.sc-apto .info-part {
+    color: #9D999C;
+    width: 300px;
+    position: absolute;
+    bottom: 15px;
+    right: 30px;
+}
+.sc-apto .info-part h3{
+    font-family: 'gothambold';
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid #868686;
+}
+.sc-apto .info-part span {
+    display: block;
+    border: 1px solid #9D7F73;
+    color: #0b2330;
+    font-family: 'aleoitalic';
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 4px;
+    margin-top: 4px;
+    max-width: 110px;
+
+}
+/*Galeria*/
+.sc-apto .img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+#sc-apto-2 .img {
+    background-image: url("../img/apto-2-img.jpg");
+}
+#sc-apto-4 .img {
+    background-image: url("../img/apto-4-img.jpg");
+}
+#sc-apto-5 .img {
+    background-image: url("../img/apto-5-planta.jpg");
+}
+#sc-apto-9 .img {
+    background-image: url("../img/apto-9-img.jpg");
 }
 /*Transicion*/
 .tr-overlay {
@@ -901,7 +977,8 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
     display: none;
 }
 
-.tr-overlay.proyecto {
+.tr-overlay.proyecto,
+.tr-overlay[class*="apto"] {
     background: white;
 }
 .tr-overlay.ubicacion,
