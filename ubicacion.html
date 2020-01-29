@@ -17,7 +17,7 @@
   <title>ALUNA - SOLERIUM</title>
 </head>
 
-<body>
+<body style="background-color: #0c2430">
   <!--Contenido del slide-->
   <main>
     <div class="cd-index cd-main-content">
@@ -133,12 +133,39 @@
   <script src="js/jquery-2.1.1.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/interactividad.js"></script>
+  <script src="js/anime.min.js"></script>
   <script>
     $('.al-slider').slick({
       infinite: false,
       slidesToShow: 1,
       slidesToScroll: 1
+    })
+    // Particular
+    // Final
+    .add({
+        targets: ".slick-next",
+        opacity: [0, 1],
+        duration: 1200
+      }, '-=1000')
+      .add({
+        targets: ".btn-volver",
+        opacity: [0, 1],
+        duration: 1200
+      }, '-=600');;
+
+    //Animacion
+    var tl = anime.timeline({
+      easing: 'easeOutExpo'
     });
+
+    tl
+    .add({
+        targets: 'main',
+        opacity: [0, 1],
+        duration: 800,
+        delay: 500
+      });
+
   </script>
 </body>
 

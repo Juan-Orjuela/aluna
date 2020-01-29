@@ -201,7 +201,10 @@ img {
     height: 100%;
     z-index: 2;
 }
-
+html .slick-next, html .slick-prev {
+    width: 40px;
+    height: 40px;
+}
 html .slick-next {
     right: 30px;
 }
@@ -212,7 +215,7 @@ html .slick-prev {
 }
 
 html .slick-prev:before, html .slick-next:before {
-    font-size: 28px;
+    font-size: 40px;
 }
 
 html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
@@ -449,7 +452,7 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
 
 #sc-proyecto.al-cont .al-slide .slide-1 .col-1 {
     width: 65%;
-    background: url('../img/aluna-proy-1.jpg') no-repeat left center;
+    background-color: #aa8b81;;
     position: relative;
     overflow: hidden;
 }
@@ -519,13 +522,23 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
     border-right: 1px solid #0b2330;
     padding-right: 8px;
     margin-right: 8px;
+    min-width: 47px;
+    box-sizing: border-box;
+    display: inline-block;
 }
 
 #sc-proyecto .al-py-footer {
-    border-bottom: 1px solid #0b2330;
     margin-top: 2rem;
+    position: relative;
 }
-
+#sc-proyecto .al-py-footer i {
+    height: 1px;
+    width: 0;
+    background: #0c2430;
+    left: 0;
+    position: absolute;
+    bottom: 0;
+}
 #sc-proyecto .slick-next:before, #sc-proyecto .slick-prev:before {
     color: #0b2330;
 }
@@ -1111,6 +1124,9 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
      border: 1px solid #aa8b81;
 }
 /*ANIMACIONES*/
+body.main {
+    opacity: 0;
+}
 /*Home*/
 
 .al-h-img .img-cont {
@@ -1128,5 +1144,12 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
 }
 .al-h-nav a {
     z-index: 2;
+    opacity: 0;
+}
+.al-h-nav > div {
+    height: 0;
+}
+/*Proyectos*/
+#sc-proyecto .slide-2 .col {
     opacity: 0;
 }

@@ -29,14 +29,15 @@
             <h2>Proyecto</h2>
           </div>
           <a class="btn-volver" href="index.html" data-type="page-transition">INICIO</a>
-          <div id="al-py-slider" class="al-slider"> 
+          <div id="al-py-slider" class="al-slider">
             <div class="al-slide">
               <div class="slide-1">
                 <div class="col-1">
                   <div class="img-cont"></div>
                 </div>
                 <div class="col-2">
-                  <p class="aleo lg">Edificio de 23 pisos, con 20 pisos de apartamentos, 1 piso de lobby y zonas sociales, una terraza recorrible y 5 niveles de estacionamiento.</p>
+                  <p class="aleo lg">Edificio de 23 pisos, con 20 pisos de apartamentos, 1 piso de lobby y zonas
+                    sociales, una terraza recorrible y 5 niveles de estacionamiento.</p>
                 </div>
               </div>
             </div>
@@ -45,29 +46,35 @@
                 <div class="col-1">
                   <div class="img-cont"></div>
                 </div>
-              <div class="col-2">
-                <div>
-                  <p class="aleo lg">Aluna es un proyecto que ha sido pensado para crear momentos de tranquilidad y
-                    descanso en la cosmopolita ciudad de Bogotá.</p>
-                </div>
-                <div class="al-fila">
-                  <div class="col">Es un edificio con un diseño arquitectónico contemporáneo y vanguardista, reconocido
-                    por su forma de media luna y su ubicación privilegiada, convirtiéndolo en un candidato perfecto para
-                    ser el próximo hito urbano de la ciudad. Con 23 pisos de altura y 48 apartamentos, cada uno con una
-                    exclusiva vista.</div>
-                  <div class="col">Está pensado cuidadosamente hasta el último detalle para crear experiencias
-                    placenteras en sus propietarios y visitantes. Su ubicación en una zona arbolada y tranquila sobre la
-                    carrera sexta y la Calle 91, son el marco ideal para un estilo de vida sofisticado y contemporáneo.
+                <div class="col-2">
+                  <div>
+                    <p class="aleo lg">Aluna es un proyecto que ha sido pensado para crear momentos de tranquilidad y
+                      descanso en la cosmopolita ciudad de Bogotá.</p>
+                  </div>
+                  <div class="al-fila">
+                    <div class="col">Es un edificio con un diseño arquitectónico contemporáneo y vanguardista,
+                      reconocido
+                      por su forma de media luna y su ubicación privilegiada, convirtiéndolo en un candidato perfecto
+                      para
+                      ser el próximo hito urbano de la ciudad. Con 23 pisos de altura y 48 apartamentos, cada uno con
+                      una
+                      exclusiva vista.</div>
+                    <div class="col">Está pensado cuidadosamente hasta el último detalle para crear experiencias
+                      placenteras en sus propietarios y visitantes. Su ubicación en una zona arbolada y tranquila sobre
+                      la
+                      carrera sexta y la Calle 91, son el marco ideal para un estilo de vida sofisticado y
+                      contemporáneo.
+                    </div>
+                  </div>
+                  <div class="al-py-footer">
+                    <ul>
+                      <li><span class="num">23</span> Pisos</li>
+                      <li><span class="num">48</span> Apartamentos</li>
+                      <li><span class="num">113</span> Estacionamientos</li>
+                      <i></i>
+                    </ul>
                   </div>
                 </div>
-                <div class="al-py-footer">
-                  <ul>
-                    <li><span class="num">23</span> Pisos</li>
-                    <li><span class="num">48</span> Apartamentos</li>
-                    <li><span class="num">113</span> Estacionamientos</li>
-                  </ul>
-                </div>
-              </div>
               </div>
             </div>
           </div>
@@ -81,7 +88,8 @@
 
         <nav class="al-main-nav">
           <ul>
-            <li><a href="proyecto.html" data-type="page-transition">PROYECTO</a></li>
+            <li><a href="index.html" data-type="page-transition">INICIO</a></li>
+            <li><a class="actual" href="proyecto.html" data-type="page-transition">PROYECTO</a></li>
             <li><a href="ubicacion.html" data-type="page-transition">UBICACIÓN</a></li>
             <li><a href="apartamentos.html" data-type="page-transition">APARTAMENTOS</a></li>
             <li><a href="galeria.html" data-type="page-transition">GALERÍA</a></li>
@@ -101,12 +109,85 @@
   <script src="js/jquery-2.1.1.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/interactividad.js"></script>
+  <script src="js/anime.min.js"></script>
   <script>
     $('.al-slider').slick({
       infinite: false,
       slidesToShow: 1,
       slidesToScroll: 1
     });
+    //Animacion
+    var tl = anime.timeline({
+      easing: 'easeOutExpo'
+    });
+
+    var tl2 = anime.timeline({
+      easing: 'easeOutExpo'
+    });
+    // Wrap every letter in a span
+    var textWrapper = document.querySelector('.aleo');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    tl
+    .add({
+        targets: 'main',
+        opacity: [0, 1],
+        duration: 800,
+        delay: 500
+      })
+      .add({
+        targets: '#sc-proyecto .img-cont',
+        opacity: [0, 1],
+        top: ["100%", 0],
+        duration: 1200        
+      })
+      .add({
+        targets: '.slide-1 .letter',
+        opacity: [0, 1],
+        delay: anime.stagger(40) // increase delay by 100ms for each elements.
+      })
+      .add({
+        targets: ".slick-next",
+        opacity: [0, 1],
+        duration: 1200
+      }, '-=1000')
+      .add({
+        targets: ".btn-volver",
+        opacity: [0, 1],
+        duration: 1200
+      }, '-=600');
+
+    function slide2() {
+      var textWrapper2 = document.querySelector('.slide-2 .aleo');
+      textWrapper2.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+      tl2
+        .add({
+          targets: '.slide-2 .letter',
+          opacity: [0, 1],
+          delay: anime.stagger(40)
+        })
+        .add({
+          targets: '.slide-2 .al-fila .col',
+          opacity: [0, 1],
+          translateX: [-200, 0],
+          delay: anime.stagger(500),
+          duration: 2000
+        }, '-=1600')
+        .add({
+          targets: '.al-py-footer i',
+          width: [0, '100%'],
+          duration: 1000
+        }, '-=1200')
+        .add({
+          targets: '.al-py-footer li',
+          opacity: [0, 1],
+          duration: 1000,
+          easing: 'linear',
+          delay: anime.stagger(200)
+        });
+    }
+    $("#al-py-slider").one("click", ".slick-next", slide2);
   </script>
 </body>
 
