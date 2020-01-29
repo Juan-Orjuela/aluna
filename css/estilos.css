@@ -158,7 +158,10 @@ img {
     opacity: 0;
     white-space: nowrap;
 }
-
+.al-main-nav ul a.actual {
+    color: #aa8b81;
+    pointer-events: none;
+}
 .al-main-nav ul li {
     margin-bottom: 2rem;
 }
@@ -249,26 +252,31 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
 
 /*HOME*/
 .al-h-img {
-    background-size: cover;
     width: 50%;
     position: relative;
     overflow: hidden;
+    background-color: #0b2330;
 }
 
 .al-h-img .img-cont {
-    background: center no-repeat;
-    background-size: cover;
     position: absolute;
-    top: 0;
+    top: ;
     left: 0;
     width: 100%;
     height: 100%;
     
 }
-
-.al-h-img.pro .img-cont {
+.al-h-img .img-cont > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: center no-repeat;
+    background-size: cover;
+}
+.al-h-img .img-cont .pro {
     background-image: url("../img/aluna-home-1.jpg");
-    /*transform: scale(1.2);*/
 }
 
 .al-h-info {
@@ -301,6 +309,7 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.25em;
+    position: relative;
 }
 
 .al-h-nav {
@@ -309,7 +318,7 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
     flex-direction: row;
     min-height: 490px;
     box-sizing: border-box;
-    border: 1px solid #D9D8CA;
+    position: relative;
 }
 
 .al-h-nav > div {
@@ -394,7 +403,7 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
 .al-h-footer {
     margin-top: 16px;
     display: flex;
-    direction: row;
+    flex-direction: row;
     justify-content: space-between;
     align-items: flex-end
 }
@@ -1100,4 +1109,24 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
 #sc-plantas .al-pl-nav .activo {
      color: #aa8b81;
      border: 1px solid #aa8b81;
+}
+/*ANIMACIONES*/
+/*Home*/
+
+.al-h-img .img-cont {
+    top: 100%;
+    opacity: 0;
+}
+.al-h-nav svg {
+    position: absolute;
+    z-index:1;
+}
+.al-h-nav svg rect,
+.al-h-footer a, .al-h-footer span,
+.al-h-info h1 img, .al-h-info h1 small {
+    opacity: 0;
+}
+.al-h-nav a {
+    z-index: 2;
+    opacity: 0;
 }
