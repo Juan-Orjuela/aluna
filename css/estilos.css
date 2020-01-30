@@ -934,10 +934,6 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
     letter-spacing: 0.15em;
 }
 
-.fila-zonas h4:before, .fila-zonas h4:after {
-    content: "-"
-}
-
 #sc-zonas .al-cornisa {
     position: fixed;
     top: initial;
@@ -1348,7 +1344,8 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
     padding: 0;
 }
 
-#sc-plantas .al-pl-nav button, #sc-plantas .al-pl-nav a {
+#sc-plantas .al-pl-nav button, 
+#sc-plantas .al-pl-nav a {
     border: 1px solid #0c2430;
     width: 100%;
     display: block;
@@ -1364,6 +1361,7 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
     -webkit-transition: all .3s ease;
     -o-transition: all .3s ease;
     transition: all .3s ease;
+    cursor: pointer;
 }
 
 #sc-plantas .al-pl-nav button:focus {
@@ -1378,9 +1376,11 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
     color: #aa8b81;
 }
 
-#sc-plantas .al-pl-nav .activo {
+#sc-plantas .al-pl-nav .activo,
+#sc-plantas .al-pl-nav button:hover {
     color: #aa8b81;
     border: 1px solid #aa8b81;
+
 }
 
 /*ANIMACIONES*/

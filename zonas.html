@@ -35,16 +35,16 @@
                 <div class="fila-zonas">
                   <div class="col-20">
                     <h3>LOBBY</h3>
-                    
+
                   </div>
                   <div class="col-20">
-                    
+
                   </div>
                   <div class="col-20">
-                    
+
                   </div>
                   <div class="col-40">
-                    
+
                   </div>
                 </div>
               </div>
@@ -70,7 +70,7 @@
                     </ul>
                   </div>
                   <div class="col-40">
-                    <h4>KITCHEN PLACE</h4>
+                    <h4>- KITCHEN PLACE -</h4>
                   </div>
                 </div>
               </div>
@@ -95,7 +95,7 @@
                     </ul>
                   </div>
                   <div class="col-40">
-                    <h4>FIRE PIT & BBQ</h4>
+                    <h4>- FIRE PIT & BBQ -</h4>
                   </div>
                 </div>
               </div>
@@ -115,10 +115,10 @@
                     </ul>
                   </div>
                   <div class="col-20">
-                    
+
                   </div>
                   <div class="col-40">
-                    <h4>CO WORKING</h4>
+                    <h4>- CO WORKING -</h4>
                   </div>
                 </div>
               </div>
@@ -144,7 +144,7 @@
                     </ul>
                   </div>
                   <div class="col-40">
-                    <h4>MIRADOR WOOD FIRE</h4>
+                    <h4> - MIRADOR WOOD FIRE -</h4>
                   </div>
                 </div>
               </div>
@@ -159,13 +159,13 @@
                     <p>Piso 23</p>
                   </div>
                   <div class="col-20">
-                    
+
                   </div>
                   <div class="col-20">
-                    
+
                   </div>
                   <div class="col-40">
-                    <h4>ZONA TRX & PILATES</h4>
+                    <h4>- ZONA TRX & PILATES -</h4>
                   </div>
                 </div>
               </div>
@@ -181,11 +181,12 @@
 
         <nav class="al-main-nav">
           <ul>
+            <li><a href="index.html" data-type="page-transition">INICIO</a></li>
             <li><a href="proyecto.html" data-type="page-transition">PROYECTO</a></li>
             <li><a href="ubicacion.html" data-type="page-transition">UBICACIÓN</a></li>
             <li><a href="apartamentos.html" data-type="page-transition">APARTAMENTOS</a></li>
             <li><a href="galeria.html" data-type="page-transition">GALERÍA</a></li>
-            <li><a href="zonas.html" data-type="page-transition">ZONAS COMUNES</a></li>
+            <li><a class="actual" href="zonas.html" data-type="page-transition">ZONAS COMUNES</a></li>
             <li><a href="plantas.html" data-type="page-transition">PLANTAS TIPO</a></li>
             <li><a href="solerium/index.html" data-type="page-transition">SOLERIUM.</a></li>
           </ul>
@@ -201,12 +202,83 @@
   <script src="js/jquery-2.1.1.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/interactividad.js"></script>
+  <script src="js/anime.min.js"></script>
   <script>
     $('.al-slider').slick({
       infinite: false,
       slidesToShow: 1,
       slidesToScroll: 1
     });
+
+    //Animacion
+    var tl = anime.timeline({
+      easing: 'linear'
+    });
+
+    tl
+      // Inicio
+      .add({
+        targets: 'main',
+        opacity: [0, 1],
+        duration: 800,
+        delay: 500
+      })
+
+      // Final
+      .add({
+        targets: ".al-ap-img a",
+        opacity: [0, 1],
+        duration: 1200
+      })
+      .add({
+        targets: ".btn-volver",
+        opacity: [0, 1],
+        duration: 1200
+      }, '-=600');
+
+    function animSlide() {
+      var textWrapper = document.querySelector('.slick-active h3');
+          textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+      var textWrapper2 = document.querySelector('.slick-active p');
+          textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+      
+      var textWrapper3 = document.querySelector('.slick-active h4');
+          textWrapper3.innerHTML = textWrapper3.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+      var tlz = anime.timeline({
+        easing: 'linear'
+      });
+
+      tlz
+      .add({
+        targets: 'h3 .letter',
+        opacity: [0, 1],
+        delay: anime.stagger(40)
+      })
+      .add({
+        targets: 'p .letter',
+        opacity: [0, 1],
+        delay: anime.stagger(40)
+      }, '-=600')
+
+      .add({
+        targets: '.col-20 li',
+        opacity: [0, 1],
+        translateX: [-10, 0],
+        duration: 200,
+        
+        delay: anime.stagger(200)
+      }, '-=600')
+
+      .add({
+        targets: 'h4 .letter',
+        opacity: [0, 1],
+        delay: anime.stagger(40)
+      }, '-=1200');
+    }
+    
+    $("#al-zn-slider").on("click", ".slick-next, .slick-prev", animSlide);
   </script>
 </body>
 

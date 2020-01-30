@@ -17,7 +17,7 @@
   <title>ALUNA - SOLERIUM</title>
 </head>
 
-<body>
+<body style="background-color: #0c2430">
   <!--Contenido del slide-->
   <main>
     <div class="cd-index cd-main-content">
@@ -44,8 +44,7 @@
             <div class="al-slide">
               <div class="slide-2 slide-gal">
                 <div class="col-1">
-                  <p>Reuniones con el mejor sabor<br>
-                    de tus recetas.</p>
+                  <p>Reuniones con el mejor sabor de tus recetas.</p>
                 </div>
                 <div class="col-2">
                   <div class="img-cont"></div>
@@ -94,13 +93,45 @@
   <script src="js/jquery-2.1.1.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/interactividad.js"></script>
-  <script>
-    $('.al-slider').slick({
-      infinite: false,
-      slidesToShow: 1,
-      slidesToScroll: 1
+  <script src="js/anime.min.js"></script>
+    <script>
+      $('.al-slider').slick({
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      });
+
+      //Animacion
+    var tl = anime.timeline({
+      easing: 'linear'
     });
-  </script>
+
+    tl
+      // Inicio
+      .add({
+        targets: 'main',
+        opacity: [0, 1],
+        duration: 800,
+        delay: 500
+      })
+
+      // Final
+      .add({
+        targets: ".al-ap-img a",
+        opacity: [0, 1],
+        duration: 1200
+      })
+      .add({
+        targets: ".slick-next",
+        opacity: [0, 1],
+        duration: 1200
+      }, '-=1000')
+      .add({
+        targets: ".btn-volver",
+        opacity: [0, 1],
+        duration: 1200
+      }, '-=600');
+    </script>
 </body>
 
 </html>
