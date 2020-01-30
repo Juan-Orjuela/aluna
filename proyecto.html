@@ -118,11 +118,11 @@
     });
     //Animacion
     var tl = anime.timeline({
-      easing: 'easeOutExpo'
+      easing: 'linear'
     });
 
     var tl2 = anime.timeline({
-      easing: 'easeOutExpo'
+      easing: 'linear'
     });
     // Wrap every letter in a span
     var textWrapper = document.querySelector('.aleo');
@@ -139,7 +139,8 @@
         targets: '#sc-proyecto .img-cont',
         opacity: [0, 1],
         top: ["100%", 0],
-        duration: 1200        
+        duration: 1200,
+        easing: 'easeOutExpo'        
       })
       .add({
         targets: '.slide-1 .letter',
@@ -159,7 +160,7 @@
 
     function slide2() {
       var textWrapper2 = document.querySelector('.slide-2 .aleo');
-      textWrapper2.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+      textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
       tl2
         .add({

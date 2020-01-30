@@ -12,7 +12,7 @@
     <script src="js/modernizr.js"></script>
     <title>ALUNA - SOLERIUM</title>
   </head>
-  <body>
+  <body style="background-color: #aa8b81;">
     <!--Contenido del slide-->
     <main>
       <div class="cd-index cd-main-content">
@@ -24,7 +24,7 @@
 
               <div class="al-ap-img">
                 <div class="img-cont"></div>
-                <a href="solerium/index.html" data-type="page-transition"><img src="img/logo-solerium@2x.png" alt="Solerium"></a>
+                <a class="link-solerium" href="solerium/index.html" data-type="page-transition"><img src="img/logo-solerium@2x.png" alt="Solerium"></a>
               </div>
               <div class="al-ap-nav">
                 <h1>APARTAMENTOS</h1>
@@ -51,9 +51,10 @@
             
             <nav class="al-main-nav">
               <ul>
+                <li><a href="index.html" data-type="page-transition">INICIO</a></li>
                 <li><a href="proyecto.html" data-type="page-transition">PROYECTO</a></li>
                 <li><a href="ubicacion.html" data-type="page-transition">UBICACIÓN</a></li>
-                <li><a href="apartamentos.html" data-type="page-transition">APARTAMENTOS</a></li>
+                <li><a class="actual" href="apartamentos.html" data-type="page-transition">APARTAMENTOS</a></li>
                 <li><a href="galeria.html" data-type="page-transition">GALERÍA</a></li>
                 <li><a href="zonas.html" data-type="page-transition">ZONAS COMUNES</a></li>
                 <li><a href="plantas.html" data-type="page-transition">PLANTAS TIPO</a></li>
@@ -70,5 +71,61 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-2.1.1.js"></script>
     <script src="js/interactividad.js"></script>
+    <script src="js/anime.min.js"></script>
+    <script>
+    //Separar letras
+    var textWrapper = document.querySelector('h1');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    
+
+    //Animacion
+    var tl = anime.timeline({
+      easing: 'linear'
+    });
+
+    tl
+      // Inicio
+      .add({
+        targets: 'main',
+        opacity: [0, 1],
+        duration: 800,
+        delay: 500
+      })
+      //Particular
+      .add({
+        targets: '.img-cont',
+        opacity: [0, 1],
+        left: ["-100%", 0],
+        duration: 2000,
+        easing: 'easeOutExpo'
+        
+      })
+
+      .add({
+        targets: 'h1 .letter',
+        opacity: [0, 1],
+        delay: anime.stagger(40)
+      }, '-=600')
+
+      .add({
+        targets: '.al-ap-nav li',
+        opacity: [0, 1],
+        translateX: [-10, 0],
+        duration: 200,
+        easing: 'linear',
+        delay: anime.stagger(200)
+      }, '-=600')
+      // Final
+      .add({
+        targets: ".link-solerium",
+        opacity: [0, 1],
+        duration: 1200
+      }, '-=1000')
+      .add({
+        targets: ".btn-volver",
+        opacity: [0, 1],
+        duration: 1200
+      }, '-=600');
+    </script>
   </body>
 </html>

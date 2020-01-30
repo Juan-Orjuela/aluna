@@ -95,7 +95,7 @@
   <script>
     // Create a timeline with default parameters
     var tl = anime.timeline({
-      easing: 'easeOutExpo'
+      easing: 'linear'
 
 
     });
@@ -112,7 +112,8 @@
         targets: '.al-h-img .img-cont',
         opacity: [0, 1],
         top: ["100%", 0],
-        duration: 1200
+        duration: 1200,
+        easing: 'easeOutExpo'
         
       })
       .add({

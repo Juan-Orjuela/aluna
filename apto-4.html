@@ -91,6 +91,7 @@
             
             <nav class="al-main-nav">
               <ul>
+                <li><a href="index.html" data-type="page-transition">INICIO</a></li>
                 <li><a href="proyecto.html" data-type="page-transition">PROYECTO</a></li>
                 <li><a href="ubicacion.html" data-type="page-transition">UBICACIÓN</a></li>
                 <li><a href="apartamentos.html" data-type="page-transition">APARTAMENTOS</a></li>
@@ -111,12 +112,39 @@
     <script src="js/jquery-2.1.1.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/interactividad.js"></script>
+    <script src="js/anime.min.js"></script>
     <script>
       $('.al-slider-ap').slick({
         infinite: false,
         slidesToShow: 1,
         slidesToScroll: 1
       });
+
+      //Animacion
+    var tl = anime.timeline({
+      easing: 'linear'
+    });
+
+    tl
+      // Inicio
+      .add({
+        targets: 'main',
+        opacity: [0, 1],
+        duration: 800,
+        delay: 500
+      })
+
+      // Final
+      .add({
+        targets: ".al-ap-img a",
+        opacity: [0, 1],
+        duration: 1200
+      })
+      .add({
+        targets: ".btn-volver",
+        opacity: [0, 1],
+        duration: 1200
+      }, '-=600');
     </script>
   </body>
 </html>

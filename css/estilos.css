@@ -684,7 +684,16 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
     width: 20%;
     max-width: 320px;
     padding: 60px;
-    border-right: 1px solid #aecde3;
+    position: relative;
+}
+
+#al-ub-slider .slide-1 .col-1 > i {
+    background: #aecde3;
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 #al-ub-slider .slide-1 {
@@ -739,8 +748,17 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
     color: #AA8B81;
     font-family: gothambold;
     font-size: 1rem;
-    border-bottom: 1px solid #d9d8ca;
     padding-bottom: 8px;
+    position: relative;
+}
+
+#al-ub-slider .lugares h4 i {
+    position: absolute;
+    width: 100%;
+    background: #d9d8ca;
+    height: 1px;
+    bottom: 0;
+    left: 0;
 }
 
 #al-ub-slider .lugares .col {
@@ -959,10 +977,12 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
 }
 
 #sc-aptos .al-ap-img {
-    background: url("../img/aluna-aptos.jpg");
+    background: #0b2330;
     height: 60vh;
 }
-
+#sc-aptos .al-ap-img .img-cont {
+    background: url("../img/aluna-aptos.jpg");
+}
 .sc-apto .al-ap-img {
     background: #f1f1f1;
 }
@@ -1024,8 +1044,11 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
     text-align: center;
     color: white;
     text-decoration: none;
+    transition: background .5s;
 }
-
+#sc-aptos .al-ap-nav a:hover {
+    background: #0b2330;
+}
 #sc-aptos .al-ap-nav h1, .sc-apto .al-ap-info h1 {
     position: relative;
     left: -60px;
@@ -1124,12 +1147,15 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
     text-align: center;
     line-height: 1;
     padding: 8px 4px 6px;
-    ; margin-top: 2rem;
+    margin-top: 2rem;
     font-family: 'gothambold';
     text-decoration: none;
     max-width: 220px;
+    transition: background .5s;
 }
-
+.sc-apto .al-ap-info > a:hover {
+    background: #aa8b81;
+}
 .sc-apto .al-ap-img .al-slider-ap {
     max-width: calc(100vw - 600px)
 }
@@ -1358,7 +1384,7 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
 }
 
 /*ANIMACIONES*/
-body.main {
+body main {
     opacity: 0;
 }
 
@@ -1387,6 +1413,29 @@ body.main {
 }
 
 /*Proyectos*/
-#sc-proyecto .slide-2 .col {
+#sc-proyecto .slide-2 .col,
+.letter {
     opacity: 0;
+}
+
+/*Ubicacion*/
+#al-ub-slider .slide-1 .col-1 > i {
+    height: 0;
+}
+
+#al-ub-slider .lugares li,
+#al-ub-slider .col-1 li,
+.mapa  {
+    opacity: 0;
+}
+
+#al-ub-slider .lugares h4 i {
+    width: 0;
+}
+#al-ub-slider .lugares h4 {
+    color: rgb(170, 139, 129, 0);
+}
+/*Apartamentos*/
+#sc-aptos .al-ap-img .img-cont {
+    left: -100%;
 }

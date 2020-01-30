@@ -80,26 +80,56 @@
                 </span>
               </button>
             
-            <nav class="al-main-nav">
-              <ul>
-                <li><a href="proyecto.html" data-type="page-transition">PROYECTO</a></li>
-                <li><a href="ubicacion.html" data-type="page-transition">UBICACIÓN</a></li>
-                <li><a href="apartamentos.html" data-type="page-transition">APARTAMENTOS</a></li>
-                <li><a href="galeria.html" data-type="page-transition">GALERÍA</a></li>
-                <li><a href="zonas.html" data-type="page-transition">ZONAS COMUNES</a></li>
-                <li><a href="plantas.html" data-type="page-transition">PLANTAS TIPO</a></li>
-                <li><a href="solerium/index.html" data-type="page-transition">SOLERIUM.</a></li>
-              </ul>
-            </nav>
-            <div class="al-overlay"></div>
-            <!-- Fin contenido -->
-         </div>
-      </div>
-   </main>
-   <div class="tr-overlay"></div>
-   <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="js/jquery-2.1.1.js"></script>
-    <script src="js/interactividad.js"></script>
-  </body>
-</html>
+              <nav class="al-main-nav">
+                <ul>
+                  <li><a href="index.html" data-type="page-transition">INICIO</a></li>
+                  <li><a href="proyecto.html" data-type="page-transition">PROYECTO</a></li>
+                  <li><a href="ubicacion.html" data-type="page-transition">UBICACIÓN</a></li>
+                  <li><a href="apartamentos.html" data-type="page-transition">APARTAMENTOS</a></li>
+                  <li><a href="galeria.html" data-type="page-transition">GALERÍA</a></li>
+                  <li><a href="zonas.html" data-type="page-transition">ZONAS COMUNES</a></li>
+                  <li><a href="plantas.html" data-type="page-transition">PLANTAS TIPO</a></li>
+                  <li><a href="solerium/index.html" data-type="page-transition">SOLERIUM.</a></li>
+                </ul>
+              </nav>
+              <div class="al-overlay"></div>
+              <!-- Fin contenido -->
+            </div>
+          </div>
+        </main>
+        <div class="tr-overlay"></div>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="js/jquery-2.1.1.js"></script>
+        <script src="js/interactividad.js"></script>
+        <script src="js/anime.min.js"></script>
+        <script>
+          //Animacion
+          var tl = anime.timeline({
+            easing: 'linear'
+          });
+      
+          tl
+            // Inicio
+            .add({
+              targets: 'main',
+              opacity: [0, 1],
+              duration: 800,
+              delay: 500
+            })
+      
+            // Final
+            .add({
+              targets: ".al-ap-img a",
+              opacity: [0, 1],
+              duration: 1200
+            })
+            .add({
+              targets: ".btn-volver",
+              opacity: [0, 1],
+              duration: 1200
+            }, '-=600');
+        </script>
+      </body>
+      
+      </html>

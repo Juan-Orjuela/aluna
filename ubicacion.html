@@ -34,10 +34,10 @@
               <div class="slide-1">
                 <div class="col-1">
                   <div class="encabezado">
-                    <h3>BOGOTÁ<br>
-                      <small>Chicó, Vía La Calera</small>
-                      </h3>
-                      <p>Carrera 6 # 91 - 85</p>
+                    <h3><span class="titulo titulo-1">BOGOTÁ</span><br>
+                      <small><span class="titulo titulo-2">Chicó, Vía La Calera</span></small>
+                    </h3>
+                    <p><span class="titulo titulo-3">Carrera 6 # 91 - 85</span></p>
                   </div>
                   <ul class="aleo">
                     <li>Bancos</li>
@@ -50,6 +50,7 @@
                     <li>Museos</li>
                     <li>Centros Médicos</li>
                   </ul>
+                  <i></i>
                 </div>
                 <div class="col-2">
                   <div class="mapa">
@@ -57,7 +58,7 @@
                   </div>
                   <div class="lugares al-fila">
                     <div class="col">
-                      <h4>LUGARES DE INTERÉS</h4>
+                      <h4>LUGARES DE INTERÉS <i></i></h4>
                       <ul>
                         <li>We Work</li>
                         <li>Centro 93</li>
@@ -72,7 +73,7 @@
                       </ul>
                     </div>
                     <div class="col">
-                      <h4>VÍAS PRINCIPALES</h4>
+                      <h4>VÍAS PRINCIPALES <i></i></h4>
                       <ul>
                         <li>Carrera 30</li>
                         <li>Avenida NQS</li>
@@ -94,7 +95,8 @@
               <div class="slide-2 slide-gal">
                 <div class="col-1">
                   <p>
-                    Empieza tu nuevo estilo de vida con el privilegio de la cercanía. Parque del Chicó, zonas empresariales y bancarias, y lugares de entretenimiento como bares, restaurantes y cafés.
+                    Empieza tu nuevo estilo de vida con el privilegio de la cercanía. Parque del Chicó, zonas
+                    empresariales y bancarias, y lugares de entretenimiento como bares, restaurantes y cafés.
                   </p>
                 </div>
                 <div class="col-2">
@@ -140,10 +142,99 @@
       infinite: false,
       slidesToShow: 1,
       slidesToScroll: 1
-    })
-    // Particular
-    // Final
-    .add({
+    });
+
+    //Separar letras
+    var textWrapper1 = document.querySelector('.titulo-1'),
+      textWrapper2 = document.querySelector('.titulo-2'),
+      textWrapper3 = document.querySelector('.titulo-3');
+    textWrapper1.innerHTML = textWrapper1.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    textWrapper3.innerHTML = textWrapper3.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+    //Animacion
+    var tl = anime.timeline({
+      easing: 'linear'
+    });
+    var tl2 = anime.timeline({
+      easing: 'linear'
+    });
+
+    tl
+      // Inicio
+      .add({
+        targets: 'main',
+        opacity: [0, 1],
+        duration: 800,
+        delay: 500
+      })
+
+      // Particular
+      .add({
+        targets: "#al-ub-slider .slide-1 .col-1 > i",
+        height: [0, '100%'],
+        duration: 800,
+        easing: 'easeOutExpo'
+      })
+      .add({
+        targets: '.titulo-1 .letter',
+        opacity: [0, 1],
+        delay: anime.stagger(40)
+      })
+      .add({
+        targets: '.titulo-2 .letter',
+        opacity: [0, 1],
+        delay: anime.stagger(40)
+      }, '-=600')
+      .add({
+        targets: '.titulo-3 .letter',
+        opacity: [0, 1],
+        delay: anime.stagger(40)
+      }, '-=900')
+
+      .add({
+        targets: '#al-ub-slider .col-1 li',
+        opacity: [0, 1],
+        translateX: [-10, 0],
+        duration: 200,
+        easing: 'linear',
+        delay: anime.stagger(200)
+      }, '-=600')
+
+      .add({
+        targets: '.mapa',
+        opacity: [0, 1],
+        
+        duration: 2000
+      }, '-=500')
+
+      .add({
+        targets: '#al-ub-slider .lugares h4 i',
+        width: [0, '100%'],
+        
+        duration: 500,
+        delay: anime.stagger(200)
+      }, '-=500')
+
+      .add({
+        targets: '#al-ub-slider .lugares h4',
+        color: ['rgb(170, 139, 129, 0)', 'rgb(170, 139, 129, 1)'],
+        
+        delay: anime.stagger(40),
+        duration: 2000
+      }, '-=500')
+
+      .add({
+        targets: '#al-ub-slider .col-2 li',
+        opacity: [0, 1],
+        translateX: [-10, 0],
+        duration: 200,
+        
+        delay: anime.stagger(200)
+      }, '-=600')
+
+      // Final
+      .add({
         targets: ".slick-next",
         opacity: [0, 1],
         duration: 1200
@@ -152,21 +243,20 @@
         targets: ".btn-volver",
         opacity: [0, 1],
         duration: 1200
-      }, '-=600');;
+      }, '-=600');
 
-    //Animacion
-    var tl = anime.timeline({
-      easing: 'easeOutExpo'
-    });
+    function slide2() {
+      var textWrapper21 = document.querySelector('.slide-2 .col-1 p');
+      textWrapper21.innerHTML = textWrapper21.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-    tl
-    .add({
-        targets: 'main',
-        opacity: [0, 1],
-        duration: 800,
-        delay: 500
-      });
-
+      tl2
+        .add({
+          targets: '.slide-2 .letter',
+          opacity: [0, 1],
+          delay: anime.stagger(40)
+        });
+    }
+    $("#al-ub-slider").one("click", ".slick-next", slide2);
   </script>
 </body>
 
