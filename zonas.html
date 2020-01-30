@@ -209,7 +209,8 @@
       slidesToShow: 1,
       slidesToScroll: 1
     });
-
+    var textWrapperi = document.querySelector('.slick-active h3');
+          textWrapperi.innerHTML = textWrapperi.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
     //Animacion
     var tl = anime.timeline({
       easing: 'linear'
@@ -223,7 +224,11 @@
         duration: 800,
         delay: 500
       })
-
+      .add({
+        targets: 'h3 .letter',
+        opacity: [0, 1],
+        delay: anime.stagger(40)
+      })
       // Final
       .add({
         targets: ".al-ap-img a",
