@@ -10,6 +10,8 @@
   <!--<link rel="stylesheet" href="css/transicion.css">-->
   <link rel="stylesheet" href="css/menu.css">
   <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/slick-theme.css">
   <script src="js/modernizr.js"></script>
   <title>ALUNA - SOLERIUM</title>
 </head>
@@ -26,7 +28,15 @@
 
           <div class="al-ap-img">
             <div class="ap-cont">
-              <img src="img/apto-1-planta.jpg" alt="Apartamento 1">
+              <div class="al-slider-ap">
+                <div class="al-slide-ap">
+                  <div class="img"></div>
+                </div>
+                <div class="al-slide-ap">
+                  <div class="img"></div>
+                </div>
+              </div>
+              
             </div>
             <a href="solerium/index.html" data-type="page-transition"><img src="img/logo-solerium-c@2x.png"
                 alt="Solerium"></a>
@@ -93,9 +103,15 @@
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="js/jquery-2.1.1.js"></script>
+  <script src="js/slick.min.js"></script>
   <script src="js/interactividad.js"></script>
   <script src="js/anime.min.js"></script>
   <script>
+    $('.al-slider-ap').slick({
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      });
     //Animacion
     var tl = anime.timeline({
       easing: 'linear'

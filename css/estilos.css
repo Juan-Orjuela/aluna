@@ -1209,7 +1209,89 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
 #sc-apto-9 .img {
     background-image: url("../img/apto-9-img.jpg");
 }
+/*Galerias nuevas*/
+.sc-apto .al-slide-ap .img {
+    background-size: cover;
+}
+.sc-apto .al-slide-ap:nth-child(1) .img {
+    background-size: contain;
+    background-color: #f1f1f1;
+}
+#sc-apto-1 .al-slide-ap:nth-child(1) .img {
+    background-image: url("../img/apto-1-planta.jpg");
+}
+#sc-apto-1 .al-slide-ap:nth-child(2) .img {
+    background-image: url("../img/drone-9.jpg");
+}
 
+#sc-apto-2 .al-slide-ap:nth-child(1) .img {
+    background-image: url("../img/apto-2-planta.jpg");
+}
+#sc-apto-2 .al-slide-ap:nth-child(2) .img {
+    background-image: url("../img/apto-2-img.jpg");
+}
+#sc-apto-2 .al-slide-ap:nth-child(3) .img {
+    background-image: url("../img/drone-22.jpg");
+}
+
+#sc-apto-3 .al-slide-ap:nth-child(1) .img {
+    background-image: url("../img/apto-3-planta.jpg");
+}
+#sc-apto-3 .al-slide-ap:nth-child(2) .img {
+    background-image: url("../img/drone-9.jpg");
+}
+
+#sc-apto-4 .al-slide-ap:nth-child(1) .img {
+    background-image: url("../img/apto-4-planta.jpg");
+}
+#sc-apto-4 .al-slide-ap:nth-child(2) .img {
+    background-image: url("../img/apto-4-img.jpg");
+}
+#sc-apto-4 .al-slide-ap:nth-child(3) .img {
+    background-image: url("../img/drone-18.jpg");
+}
+#sc-apto-4 .al-slide-ap:nth-child(3) .img {
+    background-image: url("../img/drone-20.jpg");
+}
+
+#sc-apto-5 .al-slide-ap:nth-child(1) .img {
+    background-image: url("../img/apto-5-planta.jpg");
+}
+#sc-apto-5 .al-slide-ap:nth-child(2) .img {
+    background-image: url("../img/drone-7.jpg");
+}
+
+
+#sc-apto-6 .al-slide-ap:nth-child(1) .img {
+    background-image: url("../img/apto-6-planta.jpg");
+}
+#sc-apto-6 .al-slide-ap:nth-child(2) .img {
+    background-image: url("../img/drone-18.jpg");
+}
+
+#sc-apto-7 .al-slide-ap:nth-child(1) .img {
+    background-image: url("../img/apto-7-planta.jpg");
+}
+#sc-apto-7 .al-slide-ap:nth-child(2) .img {
+    background-image: url("../img/drone-9.jpg");
+}
+
+#sc-apto-8 .al-slide-ap:nth-child(1) .img {
+    background-image: url("../img/apto-8-planta.jpg");
+}
+#sc-apto-8 .al-slide-ap:nth-child(2) .img {
+    background-image: url("../img/drone-9.jpg");
+}
+
+#sc-apto-9 .al-slide-ap:nth-child(1) .img {
+    background-image: url("../img/apto-9-planta.jpg");
+}
+#sc-apto-9 .al-slide-ap:nth-child(2) .img {
+    background-image: url("../img/apto-9-img.jpg");
+}
+#sc-apto-9 .al-slide-ap:nth-child(3) .img {
+    background-image: url("../img/drone-18.jpg");
+}
 /*Transicion*/
 .tr-overlay {
     position: fixed;
@@ -1438,4 +1520,9 @@ body main {
 /*Apartamentos*/
 #sc-aptos .al-ap-img .img-cont {
     left: -100%;
+}
+
+.slick-prev:before, .slick-next:before
+{
+    text-shadow:1px 1px 3px rgba(0,0,0,.5);
 }
