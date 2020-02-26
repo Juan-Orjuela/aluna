@@ -897,7 +897,9 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
 #al-zn-slider .slide-3 {
     background-image: url("../img/aluna-zc-lounge-club1.jpg")
 }
-
+#al-zn-slider .slide-3b {
+    background-image: url("../img/08_terraza_piso.jpg")
+}
 #al-zn-slider .slide-4 {
     background-image: url("../img/aluna-zc-lounge-club2.jpg")
 }
@@ -909,9 +911,24 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
 #al-zn-slider .slide-6 {
     background-image: url("../img/aluna-zc-terraza2.jpg")
 }
+#al-zn-slider .slide-7 {
+    background-image: url("../img/01_zona_social.jpg")
+}
+#al-zn-slider .slide-8 {
+    background-image: url("../img/02_cinema.jpg")
+}
+#al-zn-slider .slide-9 {
+    background-image: url("../img/05_mirador_fitness.jpg")
+}
+#al-zn-slider .slide-10 {
+    background-image: url("../img/06_mirador_2.jpg")
+}
+#al-zn-slider .slide-11 {
+    background-image: url("../img/07_ninos.jpg")
+}
 
 .fila-zonas {
-    background: #0b2330;
+    /* background: #0b2330; */
     color: white;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -919,7 +936,7 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
     position: absolute;
     left: 60px;
     right: 403px;
-    top: 130px;
+    top: 30px;
     padding: 20px 25px 15px;
 }
 
@@ -933,22 +950,26 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
 
 .fila-zonas h3 {
     font-family: 'gothambold';
-    ; letter-spacing: 0.15em;
-    color: #aecde3;
+    letter-spacing: 0.15em;
+    color: #ffffff;
     margin: 0;
     font-size: 1.35rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.75);
 }
 
 .fila-zonas h3 + p {
     margin: 0;
     font-size: 1.35rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.75);
 }
 
 .fila-zonas ul {
     padding: 0;
     list-style-type: none;
-    color: #aecde3;
+    color: #ffffff;
     margin: 0;
+
+    text-shadow: 1px 1px 2px rgba(0,0,0,.75);
 }
 
 .fila-zonas ul li:before {
@@ -958,6 +979,7 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
 .fila-zonas h4 {
     margin: 0;
     letter-spacing: 0.15em;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.75);
 }
 
 #sc-zonas .al-cornisa {
@@ -1285,8 +1307,9 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
 #sc-apto-5 .al-slide-ap:nth-child(1) .img {
     background-image: url("../img/apto-5-planta.jpg");
 }
+
 #sc-apto-5 .al-slide-ap:nth-child(2) .img {
-    background-image: url("../img/apto-5-planta.jpg");
+    background-image: url("../img/apto-5b-planta.jpg");
 }
 #sc-apto-5 .al-slide-ap:nth-child(3) .img {
     background-image: url("../img/drone-7.jpg");
