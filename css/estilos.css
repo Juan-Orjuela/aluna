@@ -81,7 +81,7 @@ img {
     letter-spacing: 0.05em;
     line-height: 1;
     margin: 0;
-    positin: relative;
+    position: relative;
     min-width: 140px;
     padding: 12px;
     border: 1px solid #D9D8CA;
@@ -304,7 +304,6 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
 
 .al-h-img .img-cont {
     position: absolute;
-    top: ;
     left: 0;
     width: 100%;
     height: 100%;
@@ -321,7 +320,7 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
 }
 
 .al-h-img .img-cont .pro {
-    background-image: url("../img/aluna-home-1.jpg");
+    background-image: url("../img/aluna-entrada.jpg");
 }
 
 .al-h-info {
@@ -776,7 +775,9 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
 .slide-gal > div {
     width: 50%;
 }
-
+.slide-gal > .col {
+    width: 100%;
+}
 .slide-gal .col-1 {
     padding: 60px;
     display: -webkit-box;
@@ -813,12 +814,37 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
     top: -24px;
 }
 
-.slide-gal .col-2 {
+.slide-gal .col p {
+    max-width: 590px;
+    color: #aecde3;
+    font-family: aleolightitalic;
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+    margin: 0;
+    position: absolute;
+    bottom: 60px;
+    left: 60px;
+    
+}
+
+.slide-gal .col p:before {
+    content: "";
+    height: 1px;
+    width: 60px;
+    background: #aecde3;
+    position: absolute;
+    left: 0;
+    top: -24px;
+}
+
+.slide-gal .col-2,
+.slide-gal .col {
     overflow: hidden;
     position: relative;
 }
 
-.slide-gal .col-2 .img-cont {
+.slide-gal .col-2 .img-cont,
+.slide-gal .col .img-cont {
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
@@ -837,22 +863,22 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
     background-position: right center;
 }
 
-#al-gl-slider .slide-1 .col-2 .img-cont {
-    background-image: url("../img/aluna-gl-1.jpg");
+#al-gl-slider .slide-1 .col .img-cont {
+    background-image: url("../img/gal-1.jpg");
     background-position: center;
 }
 
-#al-gl-slider .slide-2 .col-2 .img-cont {
-    background-image: url("../img/aluna-gl-2.jpg");
+#al-gl-slider .slide-2 .col .img-cont {
+    background-image: url("../img/gal-2.jpg");
     background-position: left center;
 }
 
-#al-gl-slider .slide-3 .col-2 .img-cont {
-    background-image: url("../img/aluna-gl-3.jpg");
+#al-gl-slider .slide-3 .col .img-cont {
+    background-image: url("../img/gal-3.jpg");
     background-position: left center;
 }
 
-/*Zonas comunes*/
+/*Zonas sociales*/
 #al-zn-slider .al-slide > div {
     background-repeat: no-repeat;
     background-size: cover;
@@ -1130,7 +1156,9 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
 .sc-apto .ap-cont {
     text-align: center;
 }
-
+.sc-apto .ap-cont .img p{
+    text-align: left;
+}
 .sc-apto .ap-cont img {
     max-width: 91%;
 }
@@ -1258,6 +1286,9 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
     background-image: url("../img/apto-5-planta.jpg");
 }
 #sc-apto-5 .al-slide-ap:nth-child(2) .img {
+    background-image: url("../img/apto-5-planta.jpg");
+}
+#sc-apto-5 .al-slide-ap:nth-child(3) .img {
     background-image: url("../img/drone-7.jpg");
 }
 
@@ -1525,4 +1556,9 @@ body main {
 .slick-prev:before, .slick-next:before
 {
     text-shadow:1px 1px 3px rgba(0,0,0,.5);
+}
+
+
+a[href*="solerium"] {
+    pointer-events:none;
 }
