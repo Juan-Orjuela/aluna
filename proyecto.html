@@ -51,7 +51,11 @@
                     <p class="aleo lg">Aluna es un proyecto que ha sido pensado para crear momentos de tranquilidad y
                       descanso en la cosmopolita ciudad de Bogotá.</p>
                   </div>
+                  
                   <div class="al-fila">
+                    <p><strong>ÁREAS DESDE 69M<sup>2</sup> HASTA 173M<sup>2</sup></strong></p>
+                  </div>
+                  <!--<div class="al-fila">
                     <div class="col">Es un edificio con un diseño arquitectónico contemporáneo y vanguardista,
                       reconocido
                       por su forma de media luna y su ubicación privilegiada, convirtiéndolo en un candidato perfecto
@@ -65,16 +69,22 @@
                       carrera sexta y la Calle 91, son el marco ideal para un estilo de vida sofisticado y
                       contemporáneo.
                     </div>
-                  </div>
+                  </div>-->
+
                   <div class="al-py-footer">
                     <ul>
                       <li><span class="num">23</span> Pisos</li>
                       <li><span class="num">48</span> Apartamentos</li>
-                      <li><span class="num">113</span> Estacionamientos</li>
+                      <li><span class="num">5</span> Niveles de estacionamiento</li>
                       <i></i>
                     </ul>
                   </div>
                 </div>
+              </div>
+            </div>
+            <div class="al-slide">
+              <div class="slide-3">
+                <div id="img-proyectos"></div>
               </div>
             </div>
           </div>
@@ -145,7 +155,7 @@
       .add({
         targets: '.slide-1 .letter',
         opacity: [0, 1],
-        delay: anime.stagger(40) // increase delay by 100ms for each elements.
+        delay: anime.stagger(20) // increase delay by 100ms for each elements.
       })
       .add({
         targets: ".slick-next",
@@ -166,15 +176,14 @@
         .add({
           targets: '.slide-2 .letter',
           opacity: [0, 1],
-          delay: anime.stagger(40)
+          delay: anime.stagger(20)
         })
         .add({
-          targets: '.slide-2 .al-fila .col',
+          targets: '.slide-2 .al-fila',
           opacity: [0, 1],
-          translateX: [-200, 0],
-          delay: anime.stagger(500),
-          duration: 2000
-        }, '-=1600')
+          duration: 1000,
+          easing: 'linear'
+        }, '-=1200')
         .add({
           targets: '.al-py-footer i',
           width: [0, '100%'],

@@ -209,7 +209,7 @@ img {
 }
 
 .lg {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     line-height: 1.75;
     letter-spacing: 0.04em;
 }
@@ -418,7 +418,7 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
     cursor: pointer;
     font-family: gothambold, sans-serif;
     letter-spacing: 0.05em;
-    font-size: .85rem;
+    font-size: 1.1rem;
     color: #d9d8ca;
     position: relative;
     -webkit-transition: all .5s ease;
@@ -581,7 +581,7 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
 
 #sc-proyecto.al-cont .al-slide .slide-2 .col-2 {
     width: 50%;
-    padding: 0 130px;
+    padding: 0 130px 0 60px;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -597,11 +597,11 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
 }
 
 #sc-proyecto.al-cont .al-slide .slide-2 .col-2 p {
-    max-width: 340px;
-    margin-bottom: 4rem;
     color: #0b2330;
 }
-
+#sc-proyecto.al-cont .al-slide .slide-2 .col-2 p strong {
+    font-family: 'gothambold';
+}
 #sc-proyecto.al-cont .al-slide .slide-2 .col-2 .col {
     color: #0b2330;
     width: 45%
@@ -620,22 +620,38 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
     display: flex;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between
+    justify-content: space-between;
+    font-size: 1.2rem;
+    flex-wrap:wrap
 }
-
+#sc-proyecto .al-py-footer ul li {
+    box-sizing: border-box;
+    width: 48%;
+    
+    display: block;
+    background: rgba(255, 255, 255, 1);
+}
+#sc-proyecto .al-py-footer ul li:nth-child(3) {
+    width: 100%;
+    margin-top: 1.2rem;
+}
 #sc-proyecto .al-py-footer .num {
-    font-size: 2rem;
+    font-size: 1.5rem;
     border-right: 1px solid #0b2330;
-    padding-right: 8px;
+    padding: 0 8px;
     margin-right: 8px;
-    min-width: 47px;
+    min-width: 48px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     display: inline-block;
+    font-family: 'gothambold';
+    text-align: center;
+    background: #0b232f;
+    color: white;
 }
 
 #sc-proyecto .al-py-footer {
-    margin-top: 2rem;
+    margin-top: 1rem;
     position: relative;
 }
 
@@ -655,7 +671,16 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
 #sc-proyecto .al-cornisa h2 {
     color: white;
 }
-
+#sc-proyecto .slide-3 {
+    position: relative;
+}
+#sc-proyecto #img-proyectos {
+    background: url('../img/fachada-proyecto.jpg') center no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
 /*UBICACION*/
 #al-ub-slider {
     background: #0b2330;
@@ -867,17 +892,26 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
     background-image: url("../img/gal-1.jpg");
     background-position: center;
 }
-
 #al-gl-slider .slide-2 .col .img-cont {
+    background-image: url("../img/experiencia-1.jpg");
+    background-position: center;
+}
+#al-gl-slider .slide-3 .col .img-cont {
     background-image: url("../img/gal-2.jpg");
     background-position: left center;
 }
-
-#al-gl-slider .slide-3 .col .img-cont {
+#al-gl-slider .slide-4 .col .img-cont {
+    background-image: url("../img/experiencia-2.jpg");
+    background-position: center;
+}
+#al-gl-slider .slide-5 .col .img-cont {
     background-image: url("../img/gal-3.jpg");
     background-position: left center;
 }
-
+#al-gl-slider .slide-6 .col .img-cont {
+    background-image: url("../img/experiencia-3.jpg");
+    background-position: center;
+}
 /*Zonas sociales*/
 #al-zn-slider .al-slide > div {
     background-repeat: no-repeat;
@@ -1267,11 +1301,15 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
     background-size: contain;
     background-color: #f1f1f1;
 }
+#sc-apto-5 .al-slide-ap:nth-child(2) .img  {
+    background-size: contain;
+    background-color: #f1f1f1;
+}
 #sc-apto-1 .al-slide-ap:nth-child(1) .img {
     background-image: url("../img/apto-1-planta.jpg");
 }
 #sc-apto-1 .al-slide-ap:nth-child(2) .img {
-    background-image: url("../img/drone-9.jpg");
+    background-image: url("../img/drone-69.jpg");
 }
 
 #sc-apto-2 .al-slide-ap:nth-child(1) .img {
@@ -1283,6 +1321,13 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
 #sc-apto-2 .al-slide-ap:nth-child(3) .img {
     background-image: url("../img/drone-22.jpg");
 }
+#sc-apto-2 .al-slide-ap:nth-child(4) .img {
+    background-image: url("../img/drone-77-1.jpg");
+}
+#sc-apto-2 .al-slide-ap:nth-child(5) .img {
+    background-image: url("../img/drone-77-2.jpg");
+}
+
 
 #sc-apto-3 .al-slide-ap:nth-child(1) .img {
     background-image: url("../img/apto-3-planta.jpg");
@@ -1295,15 +1340,19 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
     background-image: url("../img/apto-4-planta.jpg");
 }
 #sc-apto-4 .al-slide-ap:nth-child(2) .img {
-    background-image: url("../img/apto-4-img.jpg");
+    background-image: url("../img/drone-20.jpg");
 }
+#sc-apto-4 .al-slide-ap:nth-child(3) .img {
+    background-image: url("../img/drone-93.jpg");
+}
+/*
 #sc-apto-4 .al-slide-ap:nth-child(3) .img {
     background-image: url("../img/drone-18.jpg");
 }
 #sc-apto-4 .al-slide-ap:nth-child(3) .img {
     background-image: url("../img/drone-20.jpg");
 }
-
+*/
 #sc-apto-5 .al-slide-ap:nth-child(1) .img {
     background-image: url("../img/apto-5-planta.jpg");
 }
@@ -1314,6 +1363,9 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
 #sc-apto-5 .al-slide-ap:nth-child(3) .img {
     background-image: url("../img/drone-7.jpg");
 }
+#sc-apto-5 .al-slide-ap:nth-child(4) .img {
+    background-image: url("../img/drone-139.jpg");
+}
 
 
 #sc-apto-6 .al-slide-ap:nth-child(1) .img {
@@ -1322,12 +1374,24 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
 #sc-apto-6 .al-slide-ap:nth-child(2) .img {
     background-image: url("../img/drone-18.jpg");
 }
+#sc-apto-6 .al-slide-ap:nth-child(3) .img {
+    background-image: url("../img/drone-157-1.jpg");
+}
+#sc-apto-6 .al-slide-ap:nth-child(4) .img {
+    background-image: url("../img/drone-157-2.jpg");
+}
 
 #sc-apto-7 .al-slide-ap:nth-child(1) .img {
     background-image: url("../img/apto-7-planta.jpg");
 }
 #sc-apto-7 .al-slide-ap:nth-child(2) .img {
     background-image: url("../img/drone-9.jpg");
+}
+#sc-apto-7 .al-slide-ap:nth-child(3) .img {
+    background-image: url("../img/drone-167-1.jpg");
+}
+#sc-apto-7 .al-slide-ap:nth-child(4) .img {
+    background-image: url("../img/drone-167-2.jpg");
 }
 
 #sc-apto-8 .al-slide-ap:nth-child(1) .img {
