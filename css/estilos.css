@@ -887,7 +887,9 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
     background-image: url("../img/aluna-ub-1.jpg");
     background-position: right center;
 }
-
+#al-gl-slider .slide-v .col .img-cont {
+    animation: initial;
+}
 #al-gl-slider .slide-1 .col .img-cont {
     background-image: url("../img/gal-1.jpg");
     background-position: center;
