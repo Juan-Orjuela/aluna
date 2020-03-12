@@ -145,7 +145,7 @@
 
                   </div>
                   <div class="col-40">
-                    <h4></h4>
+                    
                   </div>
                 </div>
               </div>
@@ -165,7 +165,7 @@
 
                   </div>
                   <div class="col-40">
-                    <h4></h4>
+                    
                   </div>
                 </div>
               </div>
@@ -186,7 +186,7 @@
 
                   </div>
                   <div class="col-40">
-                    <h4></h4>
+                    
                   </div>
                 </div>
               </div>
@@ -209,7 +209,7 @@
 
                   </div>
                   <div class="col-40">
-                    <h4></h4>
+                    
                   </div>
                 </div>
               </div>
@@ -279,7 +279,7 @@
 
                   </div>
                   <div class="col-40">
-                    <h4></h4>
+                    
                   </div>
                 </div>
               </div>
@@ -300,7 +300,7 @@
 
                   </div>
                   <div class="col-40">
-                    <h4></h4>
+                    
                   </div>
                 </div>
               </div>
@@ -386,10 +386,10 @@
 
       var textWrapper2 = document.querySelector('.slick-active p');
           textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-      
+      /*
       var textWrapper3 = document.querySelector('.slick-active h4');
           textWrapper3.innerHTML = textWrapper3.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
+      */
       var tlz = anime.timeline({
         easing: 'linear'
       });
@@ -416,10 +416,10 @@
       }, '-=600')
 
       .add({
-        targets: 'h4 .letter',
+        targets: 'h4',
         opacity: [0, 1],
-        delay: anime.stagger(40)
-      }, '-=1200');
+        translateX: [-10, 0]
+      }, '-=600');
     }
     
     $("#al-zn-slider").on("click", ".slick-next, .slick-prev", animSlide);
