@@ -1,3 +1,9 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
 /* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
 @charset "UTF-8"; /*TIPOGRAFIA*/
 @font-face {
@@ -131,6 +137,7 @@ img {
     border: none;
     outline: none;
     cursor: pointer;
+    align-items: center;
 }
 
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after, .hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after {
@@ -624,10 +631,12 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
     -ms-flex-pack: justify;
     justify-content: space-between;
     font-size: 1.2rem;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap
 }
 
 #sc-proyecto .al-py-footer ul li {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 48%;
     display: block;
@@ -895,6 +904,7 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
 }
 
 #al-gl-slider .slide-v .col .img-cont {
+    -webkit-animation: initial;
     animation: initial;
 }
 
@@ -1030,11 +1040,13 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
     color: #ffffff;
     margin: 0;
 }
+
 .fila-zonas ul li {
     background: #0b2330;
     padding: 3px 8px 0;
     margin: 0 5px 5px;
 }
+
 .fila-zonas ul li:before {
     content: "- "
 }
@@ -1155,6 +1167,8 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
     text-align: center;
     color: white;
     text-decoration: none;
+    -webkit-transition: background .5s;
+    -o-transition: background .5s;
     transition: background .5s;
 }
 
@@ -1268,6 +1282,8 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
     font-family: 'gothambold';
     text-decoration: none;
     max-width: 220px;
+    -webkit-transition: background .5s;
+    -o-transition: background .5s;
     transition: background .5s;
 }
 
@@ -1704,4 +1720,110 @@ body main {
 
 a[href*="solerium"] {
     pointer-events: none;
+}
+
+/*RESPONSIVE*/
+@media screen and (max-width: 1920px) {
+    /*Home*/ .al-h-nav {
+        min-height: 360px;
+    }
+
+    .al-nav-btn {
+        width: 90px;
+        height: 90px;
+    }
+
+    .al-h-info {
+        padding: 80px 45px;
+    }
+
+    .al-h-nav .col-1 {
+        width: 40%;
+    }
+
+    .al-h-nav .col-2, .al-h-nav .col-3 {
+        width: 30%;
+    }
+
+    .al-h-nav .col-2 a:first-child {
+        height: 50%;
+    }
+
+    .al-h-nav .col-2 a:last-child, .al-h-nav .col-3 a {
+        height: 50%;
+    }
+
+    /*Ubicacion*/
+    #al-ub-slider .slide-1 .col-2 {
+        margin-right: 90px;
+    }
+
+    #al-ub-slider .slide-1 .col-1 {
+        padding: 30px;
+    }
+
+    #sc-ubicacion .mapa {
+        margin-right: 190px;
+    }
+
+    #sc-ubicacion .mapa + .lugares {
+        flex-direction: column;
+    }
+
+    #sc-ubicacion .mapa + .lugares > .col {
+        margin: 0;
+    }
+
+    /*Apartamentos*/
+    #sc-aptos .al-ap-nav {
+        padding: 45px;
+    }
+
+    /*Apartamento detalle*/
+    .sc-apto .des {
+        font-size: 1rem;
+    }
+
+    .sc-apto .al-ap-info {
+        padding: 0 45px 0 60px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        min-width: 600px;
+    }
+
+    .sc-apto .des ul {
+        display: flex;
+        direction: row;
+        flex-wrap: wrap;
+    }
+
+    .sc-apto .des ul li {
+        width: 50%;
+        line-height: 1.2;
+        margin-bottom: 4px;
+        font-size: .8rem;
+    }
+
+    .sc-apto .al-ap-info h1 {
+        font-size: 2rem;
+        left: 0;
+    }
+
+    /*Experiencia*/
+    #aluna-video {
+        max-width: 100%;
+    }
+
+    #sc-galeria .video-cont {
+        display: flex;
+    }
+
+    /*Zonas*/
+    #sc-zonas .fila-zonas {
+        left: 60px;
+        right: 90px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
 }
