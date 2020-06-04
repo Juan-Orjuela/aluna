@@ -541,7 +541,7 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
 #sc-proyecto.al-cont .al-slide .slide-1 .col-1 {
     width: 65%;
     background-color: #aa8b81;
-    ; position: relative;
+    position: relative;
     overflow: hidden;
 }
 
@@ -1113,11 +1113,11 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
 #sc-aptos .al-ap-img a, .sc-apto .al-ap-img a {
     position: absolute;
     bottom: -90px;
-    ; left: 30px;
+    left: 30px;
     display: inline-block;
     width: 100px;
     border: 1px solid #D9D8CA;
-    padding: 12px 18px 6px ;
+    padding: 12px 18px 6px;
 }
 
 #sc-aptos .al-ap-nav {
@@ -1723,7 +1723,7 @@ a[href*="solerium"] {
 }
 
 /*RESPONSIVE*/
-@media screen and (max-width: 1920px) {
+@media screen and (max-width: 1900px) {
     /*Home*/ .al-h-nav {
         min-height: 360px;
     }
@@ -2012,5 +2012,387 @@ a[href*="solerium"] {
     #sc-plantas .al-pl-nav {
         padding: 40px;
         min-width: 400px;
+    }
+}
+
+/*MOBILE BREAKPOINT*/
+@media screen and (max-width: 1000px) {
+    .al-cont {
+        min-height: 100vh;
+        height: initial;
+        overflow: initial;
+    }
+
+    #sc-home {
+        flex-direction: column;
+    }
+
+    #sc-home .al-h-img {
+        height: 80vh;
+        height: calc(100vh - 130px);
+        width: 100%;
+    }
+
+    .al-h-img .img-cont > div {
+        ackground-size: contain;
+    }
+
+    .al-h-info {
+        width: 100%;
+        padding: 30px 30px 40px;
+        position: relative;
+    }
+
+    .al-h-info h1 {
+        margin-bottom: 30px;
+    }
+
+    .al-h-info h1 img {
+        width: 240px;
+        margin: 0 auto;
+    }
+
+    .al-main-nav ul li {
+        margin-bottom: 1rem;
+    }
+
+    .al-h-nav {
+        min-height: 30vh;
+        align-items: stretch !important;
+        height: initial !important;
+    }
+
+    .al-h-nav > div {
+        height: initial !important;
+    }
+
+    /*Scroll*/
+    .al-h-info:before, .al-h-info:after {
+        position: absolute;
+        content: "";
+        display: block;
+        background: #d9d8ca;
+        visibility: initial;
+        top: 40px;
+    }
+
+    .al-h-info:before {
+        width: 1px;
+        height: 50px;
+        right: 30px;
+    }
+
+    .al-h-info:after {
+        width: 11px;
+        height: 11px;
+        right: 25px;
+        border-radius: 100%;
+        -webkit-animation: scrollealo 1600ms linear infinite alternate;
+        animation: scrollealo 1600ms linear infinite alternate;
+    }
+
+    @-webkit-keyframes scrollealo {
+        from {
+            margin-top: 0;
+        }
+
+        to {
+            margin-top: 39px;
+        }
+    }
+
+    @keyframes scrollealo {
+        from {
+            margin-top: 0;
+        }
+
+        to {
+            margin-top: 39px;
+        }
+    }
+
+    /*Proyecto*/
+    #al-py-slider::before {
+        display: none;
+    }
+
+    #sc-proyecto .al-slide > div {
+        width: 100%;
+        flex-direction: column;
+        position: relative;
+        justify-content: flex-end
+    }
+
+    #sc-proyecto.al-cont .al-slide .slide-1 .col-1 {
+        width: 100%;
+        background-color: #aa8b81;
+        overflow: hidden !important;
+        height: 100vh;
+        position: absolute;
+    }
+
+    #sc-proyecto.al-cont .al-slide .slide-1 .col-2 {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        align-items: flex-start;
+        padding: 30px 30px;
+        position: relative;
+        background: white;
+    }
+
+    #sc-proyecto.al-cont .al-slide .slide-1 .col-2 p {
+        padding: 0;
+        font-size: 1.2rem;
+        color: #0b2331;
+        max-width: initial;
+        text-align: left;
+        margin: 0 80px 0 0;
+    }
+
+    #sc-proyecto.al-cont .al-slide .slide-2 .col-1 {
+        width: 100%;
+        height: 80vh;
+        height: calc(100vh - 210px);
+    }
+
+    #sc-proyecto.al-cont .al-slide .slide-2 .col-2 {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        align-items: flex-start;
+        padding: 30px 30px;
+    }
+
+    .btn-volver {
+        bottom: 15px;
+        right: 15px;
+        font-size: .85rem;
+        padding: 6px 12px 4px;
+        z-index: 2;
+    }
+
+    html .slick-next {
+        right: 10px;
+    }
+
+    html .slick-prev {
+        left: 10px;
+        z-index: 5;
+    }
+
+    #sc-proyecto .al-py-footer {
+        margin-top: 0;
+    }
+
+    #sc-proyecto .al-py-footer ul li {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: initial;
+        display: block;
+        background: rgba(255, 255, 255, 1);
+    }
+
+    #sc-proyecto .al-py-footer ul li:nth-child(3) {
+        width: initial;
+        margin-top: 0;
+    }
+
+    #sc-proyecto.al-cont .al-slide .slide-2 .col-2 p.aleo {
+        padding: 0;
+        font-size: 1.2rem;
+        color: #0b2331;
+        max-width: initial;
+        text-align: left;
+        margin: 0 0 20px 0;
+    }
+
+    #sc-proyecto .al-py-footer i {
+        display: none;
+    }
+
+    /*Ubicacion*/
+    #al-ub-slider .slide-1 {
+        padding: 110px 0 40px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    #sc-ubicacion .al-slide > div.slide-1 {
+        width: 100%;
+        min-height: 100vh;
+        overflow: auto;
+        flex-direction: column;
+    }
+
+    #al-ub-slider .slide-1 .col-1 {
+        padding-top: 0;
+        width: 100%;
+        max-width: initial;
+        display: flex;
+        flex-direction: row;
+        justify-content: stretch
+    }
+
+    #al-ub-slider .slide-1 .col-1 .encabezado {
+        width: 40%;
+    }
+
+    #al-ub-slider .slide-1 .col-1 ul.aleo {
+        width: 100%;
+        margin-left: 30px;
+        display: flex;
+        flex-wrap : wrap;
+        align-items: flex-start
+    }
+
+    #al-ub-slider .slide-1 .col-1 ul.aleo li {
+        margin-right: 20px;
+    }
+
+    #al-ub-slider .slide-1 h3 small {
+        font-family: gothamlight;
+        font-size: 1rem;
+        letter-spacing: 0.01em;
+    }
+
+    #al-ub-slider .slide-1 .col-1 .encabezado h3 {
+        margin-bottom: 0;
+    }
+
+    #sc-ubicacion .mapa + .lugares {
+        display: block;
+        position: relative;
+        padding: 15px 30px 0;
+    }
+
+    #sc-ubicacion .mapa + .lugares {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #sc-ubicacion .mapa + .lugares > div {
+        width: 50%;
+        padding: 0 15px;
+    }
+
+    #al-ub-slider .slide-1 .col-1 > i {
+        display: none;
+    }
+
+    /*Apartamentos*/
+    #sc-aptos {
+        height: 100vh;
+        overflow: hidden;
+        min-height: initial;
+    }
+
+    #sc-aptos .al-ap-img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    #sc-aptos .al-ap-nav {
+        width: 100%;
+        padding: 0 60px;
+    }
+
+    #sc-aptos .al-ap-img a, .sc-apto .al-ap-img a {
+        bottom: 20px;
+        padding: 6px 12px 2px;
+    }
+
+    #sc-aptos .al-ap-nav h1, .sc-apto .al-ap-info h1 {
+        position: relative;
+        left: 0;
+        letter-spacing: 0.1em;
+    }
+
+    #sc-aptos .al-ap-nav a {
+        padding: 6px 8px 4px;
+    }
+
+    #sc-aptos .al-ap-nav ul {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #sc-aptos .al-ap-nav li:last-child a {
+        min-height: 32px;
+    }
+
+    /*Apartamento detalle*/
+    .sc-apto.al-cont {
+        min-height: 100vh;
+        height: initial;
+        overflow: initial;
+        padding: 80px 30px 40px;
+        flex-direction: column;
+    }
+
+    .sc-apto .al-ap-img .al-slider-ap {
+        max-width: 100%;
+    }
+
+    .sc-apto .al-ap-img .al-slide-ap .img {
+        height: 70vh;
+        position: relative;
+    }
+
+    .sc-apto .al-ap-info {
+        padding: 30px 45px 0 45px;
+    }
+
+    .sc-apto .al-ap-img a {
+        display: none;
+    }
+
+    .sc-apto .des ul li {
+        font-size: 1rem;
+    }
+
+    .sc-apto .info-part {
+        width: 200px;
+        bottom: 5px;
+    }
+
+    /*Plantas tipo*/
+    #sc-plantas {
+        flex-direction: column;
+    }
+
+    #sc-plantas .al-pl-img {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    #sc-plantas .al-pl-nav {
+        width: 100%;
+    }
+
+    #sc-plantas .al-pl-nav h1 {
+        position: relative;
+        left: 0;
+        font-size: 1.5rem;
+    }
+
+    #sc-plantas .al-pl-nav {
+        padding: 0 40px;
+        min-width: initial;
+    }
+
+    #sc-plantas .al-pl-img a {
+        display: none;
+    }
+
+    #sc-plantas .al-pl-img .img-cont {
+        position: relative;
+    }
+
+    #sc-plantas .al-pl-img {
+        width: 100%;
+        position: relative;
+        max-height: 80vw;
     }
 }
