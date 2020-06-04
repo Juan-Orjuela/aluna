@@ -1103,7 +1103,7 @@ html .slick-prev.slick-disabled:before, html .slick-next.slick-disabled:before {
 }
 
 #sc-aptos .al-ap-img .img-cont {
-    background: url("../img/aluna-aptos.jpg");
+    background-image: url("../img/aluna-aptos.jpg");
 }
 
 .sc-apto .al-ap-img {
@@ -1826,4 +1826,191 @@ a[href*="solerium"] {
 }
 
 @media screen and (max-width: 1300px) {
+    /*Home*/ .al-h-nav {
+        min-height: 260px;
+    }
+
+    .al-h-nav > div a {
+        font-size: .85rem;
+    }
+
+    h1 {
+        font-size: 2em;
+        margin: 0.5rem 0;
+    }
+
+    .al-nav-btn {
+        width: 90px;
+        height: 90px;
+    }
+
+    .al-h-info {
+        padding: 90px 45px 40px;
+    }
+
+    .al-h-nav .col-1 {
+        width: 33.3333%;
+    }
+
+    .al-h-nav .col-2, .al-h-nav .col-3 {
+        width: 33.3333%;
+    }
+
+    .al-h-info h1 img {
+        margin: 0 auto 1rem;
+    }
+
+    .al-main-nav {
+        width: 40%;
+    }
+
+    .al-main-nav ul a {
+        font-size: 1rem;
+    }
+
+    .al-nav-btn {
+        width: 60px;
+        height: 60px;
+    }
+
+    .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+        width: 30px;
+    }
+
+    /*Proyecto*/
+    #sc-proyecto.al-cont .al-slide .slide-1 .col-2 p {
+        padding: 60px 50px 60px 0;
+        font-size: 1.2rem;
+    }
+
+    #sc-proyecto.al-cont .al-slide .slide-2 .col-2 {
+        padding: 0 60px 0 60px;
+    }
+
+    #sc-proyecto .al-py-footer ul {
+        font-size: 1rem;
+    }
+
+    .al-cornisa h2 {
+        font-size: 1rem;
+        padding: 6px 12px;
+        min-width: 120px;
+    }
+
+    html .slick-prev:before, html .slick-next:before {
+        font-size: 30px;
+    }
+
+    /*Ubicacion*/
+    #sc-ubicacion .mapa {
+        margin-right: 0;
+    }
+
+    #al-ub-slider .slide-1 .col-1 {
+        width: 30%;
+    }
+
+    #al-ub-slider .slide-1 .col-2 {
+        margin-right: 0;
+    }
+
+    #sc-ubicacion .mapa + .lugares {
+        display: none;
+    }
+
+    /*Apartamentos*/
+    #sc-aptos h1 {
+        font-size: 1.8rem;
+    }
+
+    #sc-aptos .al-ap-nav {
+        width: 500px;
+    }
+
+    #sc-aptos .al-ap-img .img-cont {
+        background-size: cover;
+    }
+
+    #sc-aptos .al-ap-nav a {
+        padding: 8px 8px 6px;
+    }
+
+    #sc-aptos .al-ap-nav li:last-child a {
+        font-size: 12px;
+        min-height: 37px
+    }
+
+    /*Apto detalle*/
+    .sc-apto .al-ap-info h3 {
+        font-size: 1rem;
+    }
+
+    .sc-apto .al-ap-info {
+        padding: 0 45px 0 45px;
+        min-width: 500px
+    }
+
+    .sc-apto .al-ap-img .al-slider-ap {
+        max-width: calc(100vw - 500px);
+    }
+
+    .sc-apto .des ul {
+        padding-left: 0;
+    }
+
+    .sc-apto .int {
+        flex-wrap: wrap;
+    }
+
+    .sc-apto .int .areas p {
+        width: 49%;
+        margin: 0;
+    }
+
+    .sc-apto .int .areas {
+        width: 100%;
+        border-bottom: 1px solid #868686;
+        padding-bottom: 16px;
+        border-right: none;
+        display: flex;
+    }
+
+    .sc-apto .int .apt:last-child ul {
+        border-left: 1px solid #aa8b81;
+    }
+
+    .sc-apto .apt {
+        width: 50%;
+    }
+
+    .sc-apto .apt ul {
+        list-style-type: none;
+        padding: 0 8px;
+        color: #9D7F73;
+        font-size: 1.35rem;
+        line-height: 1.5;
+        margin: 4px 0;
+    }
+
+    .sc-apto .apt ul li {
+        display: inline;
+        font-size: 1rem;
+    }
+
+    .sc-apto .apt ul li:after {
+        content: " -";
+    }
+
+    .sc-apto .apt ul li:last-child:after {
+        content: "";
+    }
+
+    .sc-apto .apt ul li.nota br {
+        display: none;
+    }
+
+    #sc-plantas .al-pl-nav {
+        padding: 40px;
+        min-width: 400px;
+    }
 }
