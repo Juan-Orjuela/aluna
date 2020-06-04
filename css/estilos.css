@@ -2396,3 +2396,252 @@ a[href*="solerium"] {
         max-height: 80vw;
     }
 }
+
+@media screen and (max-width: 690px) {
+    .al-main-nav {
+        width: 60%;
+    }
+
+    #sc-proyecto.al-cont .al-slide .slide-1 .col-2 p, #sc-proyecto.al-cont .al-slide .slide-2 .col-2 p.aleo {
+        font-size: 1rem;
+        margin: 0 !important;
+    }
+
+    #sc-proyecto.al-cont .al-slide .slide-1 .col-2 p {
+        margin-right: 70px !important
+    }
+
+    #sc-proyecto.al-cont .al-slide .slide-1 .col-2, #sc-proyecto.al-cont .al-slide .slide-2 .col-2 {
+        padding: 15px 30px;
+    }
+
+    #sc-proyecto .al-py-footer ul li {
+        margin-bottom: 4px;
+        margin-right: 15px;
+    }
+
+    #sc-proyecto .al-py-footer ul {
+        font-size: .9rem;
+    }
+
+    #sc-proyecto .al-py-footer ul {
+        justify-content: flex-start
+    }
+
+    #al-ub-slider .slide-1 .col-1 .encabezado {
+        width: 60%;
+    }
+
+    #sc-ubicacion .al-slide > div.slide-2 {
+        width: 100%;
+        min-height: 100vh;
+        overflow: auto;
+        flex-direction: column-reverse;
+    }
+
+    #sc-ubicacion .al-slide > div.slide-2 > div {
+        width: 100%
+    }
+
+    #sc-ubicacion .al-slide > div.slide-2 > div.col-2 {
+        height: 90vh;
+        height: calc(100vh - 200px);
+    }
+
+    .al-cornisa {
+        top: 30px;
+        left: 30px;
+    }
+
+    .al-cornisa h2:before {
+        content: "";
+        width: 15px;
+        height: 15px;
+    }
+
+    .sc-apto .des ul {
+        justify-content: space-between
+    }
+
+    .sc-apto .des ul li {
+        width: 50%;
+        font-size: .9rem;
+    }
+
+    .sc-apto .al-ap-info {
+        padding: 30px 0 0;
+        min-width: initial;
+    }
+
+    .slide-gal .col p {
+        max-width: 400px;
+        bottom: 60px;
+        left: 30px;
+    }
+
+    #al-gl-slider .slide-3 .col .img-cont, #al-gl-slider .slide-5 .col .img-cont {
+        background-position: center;
+    }
+
+    /*Zonas*/
+    #sc-zonas .fila-zonas {
+        left: 0;
+        right: 60px;
+        flex-wrap: wrap;
+        top: 0;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #sc-zonas .fila-zonas h3 {
+        font-size: 1rem;
+        line-height: 1.2
+    }
+
+    #sc-zonas .al-cornisa {
+        bottom: 20px;
+        left: 30px;
+    }
+
+    .fila-zonas .col-20, .fila-zonas .col-40 {
+        width: 45%;
+    }
+
+    .fila-zonas ul li {
+        background: #0b2330;
+        padding: 3px 8px 0;
+        margin: 0 0 5px;
+        font-size: 14px;
+    }
+
+    .fila-zonas h4 {
+        display: block;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .al-h-info h1 img {
+        width: 200px;
+    }
+
+    .al-h-nav {
+        flex-direction: column;
+    }
+
+    .al-h-nav .col-1, .al-h-nav .col-2, .al-h-nav .col-3 {
+        width: 100%;
+    }
+
+    .al-h-nav > div a:last-child {
+        border-bottom: 1px solid #d9d8ca !important;
+    }
+
+    .al-h-footer a {
+        padding: 8px 18px 2px;
+    }
+
+    .al-main-nav {
+        padding-left: 20px;
+        width: 70%;
+    }
+
+    #sc-proyecto .al-py-footer .num {
+        font-size: 1rem;
+    }
+
+    #sc-proyecto.al-cont .al-slide .slide-2 .col-2 {
+        padding: 15px 30px 30px;
+    }
+
+    #sc-proyecto.al-cont .al-slide .slide-2 .col-2 p.aleo {
+        padding: 0 20px;
+    }
+
+    .al-cornisa h2 {
+        font-size: .8rem;
+        padding: 6px 8px;
+        min-width: 90px;
+    }
+
+    #sc-ubicacion .mapa + .lugares > div {
+        width: 100%;
+        padding: 0 ;
+    }
+
+    #sc-ubicacion .mapa + .lugares {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #al-ub-slider .slide-1 {
+        padding: 90px 0 40px;
+    }
+
+    .slide-gal .col-1 {
+        padding: 40px 15px
+    }
+
+    #sc-ubicacion .al-slide > div.slide-2 > div.col-2 {
+        height: 90vh;
+        height: calc(100vh - 100px);
+    }
+
+    #sc-aptos .al-ap-nav {
+        width: 100%;
+        padding: 0 30px;
+    }
+
+    .sc-apto .des ul li {
+        width: 100%;
+        font-size: .9rem;
+    }
+
+    .sc-apto .int .areas {
+        flex-wrap: wrap;
+    }
+
+    .sc-apto .int .areas p {
+        width: 100%;
+        margin-top: 8px;
+        text-align: center;
+    }
+
+    .sc-apto .int span {
+        max-width: initial;
+    }
+
+    .sc-apto .apt ul li {
+        font-size: .9em;
+    }
+
+    .sc-apto .apt {
+        width: 100%;
+        text-align: center;
+    }
+
+    .sc-apto.al-cont {
+        padding: 80px 30px 60px;
+    }
+
+    .sc-apto .al-ap-info > a {
+        margin: 2rem auto 0;
+    }
+
+    #sc-plantas .al-pl-nav button, #sc-plantas .al-pl-nav a {
+        padding: 4px;
+    }
+
+    .slide-gal .col p {
+        max-width: 400px;
+        width: 85%;
+    }
+
+    .fila-zonas ul li, .fila-zonas h4 {
+        font-size: 13px;
+    }
+
+    .fila-zonas .col-20, .fila-zonas .col-40 {
+        width: 100%;
+    }
+}
